@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2E777D81-A627-49C4-A8E3-C9DD9ED96351}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IDAL</RootNamespace>
+    <AssemblyName>IDAL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Iemail_template.cs" />
+    <Compile Include="Itech_admin.cs" />
+    <Compile Include="Itech_article.cs" />
+    <Compile Include="Itech_article_type.cs" />
+    <Compile Include="Itech_cart.cs" />
+    <Compile Include="Itech_forbidden_word.cs" />
+    <Compile Include="Itech_html_template.cs" />
+    <Compile Include="Itech_html_template_list.cs" />
+    <Compile Include="Itech_meeting.cs" />
+    <Compile Include="Itech_meeting_hall.cs" />
+    <Compile Include="Itech_meeting_order.cs" />
+    <Compile Include="Itech_meeting_reg_type.cs" />
+    <Compile Include="Itech_meeting_role.cs" />
+    <Compile Include="Itech_meeting_schedule.cs" />
+    <Compile Include="Itech_meeting_type.cs" />
+    <Compile Include="Itech_meeting_user_ppt.cs" />
+    <Compile Include="Itech_message.cs" />
+    <Compile Include="Itech_mobile_menu.cs" />
+    <Compile Include="Itech_mobile_menu_content.cs" />
+    <Compile Include="Itech_mobile_site_template.cs" />
+    <Compile Include="Itech_mobile_template.cs" />
+    <Compile Include="Itech_mobile_template_menu.cs" />
+    <Compile Include="Itech_mobile_type.cs" />
+    <Compile Include="Itech_mobile_type_menu.cs" />
+    <Compile Include="Itech_mobile_version.cs" />
+    <Compile Include="Itech_operating_record.cs" />
+    <Compile Include="Itech_person_print.cs" />
+    <Compile Include="Itech_project_manager.cs" />
+    <Compile Include="Itech_published_form.cs" />
+    <Compile Include="Itech_schedule.cs" />
+    <Compile Include="Itech_send_wx_message.cs" />
+    <Compile Include="Itech_session.cs" />
+    <Compile Include="Itech_task_list.cs" />
+    <Compile Include="Itech_temp_batch_account.cs" />
+    <Compile Include="Itech_user_all.cs" />
+    <Compile Include="Itech_yanzhengma.cs" />
+    <Compile Include="Itv_competence.cs" />
+    <Compile Include="Itv_menu.cs" />
+    <Compile Include="Itv_subjects.cs" />
+    <Compile Include="Itv_system_user.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tech_user.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{97e4479e-0462-41b5-bf17-2e8665666cdc}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

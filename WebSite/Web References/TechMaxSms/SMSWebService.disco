@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://note.i-conference.org/SMSWebService.asmx?wsdl" docRef="http://note.i-conference.org/SMSWebService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://note.i-conference.org/SMSWebService.asmx" xmlns:q1="http://note.i-conference.org" binding="q1:SMSWebServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://note.i-conference.org/SMSWebService.asmx" xmlns:q2="http://note.i-conference.org" binding="q2:SMSWebServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

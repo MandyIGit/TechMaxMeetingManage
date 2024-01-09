@@ -1,0 +1,56 @@
+.video_box { margin: 0 auto; width: 960px; }
+.video_box .video_cont { margin: auto; }
+.video { width: 740px; height: 505px; background: #000; float: left; display: inline; }
+.info { width: 240px; height: 505px; background: #eee; float: right; display: inline; Z-INDEX: 2; }
+.info_TopBox { width: 240px; float: left; overflow: hidden; border-bottom: 1px solid #1c1c1c; height: 203px; }
+.info h2 { height: 45px; line-height: 45px; background: #292929; float: left; width: 100%; border-top: 1px #4d4d4d solid; border-bottom: 1px solid #232323; font-size: 14px; font-weight: 600; color: #8a8a8a; border-left: 2px solid #4b8006; }
+.info h2 span { background: url(/image/INFO__03.png) no-repeat left; float: left; width: 24px; height: 45px; margin-left: 20px; }
+.info_TopBox span { }
+.info_Img { width: 240px; float: right; margin: 25px 0 25px 0; }
+#img_box { }
+.info_Img span { height: 170px; width: 132px; background: url(/image/444_03.png) no-repeat bottom; overflow: hidden; float: right; margin-right: 65px; }
+.info_Img span img { }
+.info_cont { color: #4a4242; padding-top: 15px; float: left; word-wrap: break-word; -moz-word-wrap: break-word; border-top: 1px solid #404040; height: 208px; }
+.info_cont li { padding-left: 15px; float: left; }
+.info_cont li span { width: 40px; float: left; display: inline; line-height: 20px;}
+.info_cont li p { float: right; display: inline; text-align: left; line-height: 20px; white-space: normal; width: 170px; overflow: auto; }
+.SC { background: url(/image/SC.png) no-repeat left; width: 60px; height: 30px; float: left; }
+.SC a { padding-left: 20px; height: 30px; line-height: 30px; color: #fff; }
+/* sitelogo */
+#sitelogo { float: left; background: url(/image/145.png) repeat-x; height: 30px; line-height: 30px; position: relative; width: 235px; padding-left: 5px; }
+#sitelogo span { float: left; }
+/* sitelogo ul */
+#sitelogo ul { display: block; float: left; width: 100px; height: 18px; position: relative; background: url(/image/1_03.png) top left repeat-x; margin-top: 5px; margin-left: 10px; }
+#sitelogo ul li { float: left; }
+#sitelogo ul li a { display: block; width: 10px; height: 18px; text-indent: -9000px; z-index: 20; position: absolute; overflow: hidden; }
+#sitelogo ul li a:hover { background: url(/image/1_03.png) left 35px; z-index: 2; left: 0; }
+#sitelogo ul a.star1 { left: 0px; }
+#sitelogo ul a.star1:hover { width: 10px; }
+#sitelogo ul a.star2 { left: 10px; }
+#sitelogo ul a.star2:hover { width: 20px; }
+#sitelogo ul a.star3 { left: 20px; }
+#sitelogo ul a.star3:hover { width: 30px; }
+#sitelogo ul a.star4 { left: 30px; }
+#sitelogo ul a.star4:hover { width: 40px; }
+#sitelogo ul a.star5 { left: 40px; }
+#sitelogo ul a.star5:hover { width: 50px; }
+#sitelogo ul a.star6 { left: 50px; }
+#sitelogo ul a.star6:hover { width: 60px; }
+#sitelogo ul a.star7 { left: 60px; }
+#sitelogo ul a.star7:hover { width: 70px; }
+#sitelogo ul a.star8 { left: 70px; }
+#sitelogo ul a.star8:hover { width: 80px; }
+#sitelogo ul a.star9 { left: 80px; }
+#sitelogo ul a.star9:hover { width: 90px; }
+#sitelogo ul a.star10 { left: 90px; }
+#sitelogo ul a.star10:hover { width: 100px; }
+#sitelogo #pftip { color: #999; font-size: 14px; }
+#sitelogo #pfno { width: 40px; color: green; font-family: Arial; font-weight: bold; font-size: 14px; }
+#sitelogo p { float: left; color: #666; }
+#sitelogo p span { font-family: Arial; font-style: italic; color: #f60; }
+#sitelogo #pfshi { font-size: 32px; line-height: 28px; font-weight: bold; }
+#sitelogo #pfge { font-size: 18px; line-height: 22px; }
+#sitelogo p span.no { color: #666; font-style: normal; font-size: 12px; }
+.testbox { width: 100%; margin: 0 auto; }
+.testbox h4 { text-align: center; font-size: 13px; line-height: 25px; color: #FFF; font-weight: lighter; }
+.navPoint { COLOR: white; FONT-FAMILY: Webdings; FONT-SIZE: 9pt; cursor: pointer; }

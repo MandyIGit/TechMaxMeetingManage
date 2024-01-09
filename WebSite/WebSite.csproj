@@ -1,0 +1,2995 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EBA7EA18-55F2-4D5B-9434-6ECA63C2BA58}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebSite</RootNamespace>
+    <AssemblyName>WebSite</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.0.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MyShop\WebFormUI\bin\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="LitJSON, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>kindeditor\asp.net\bin\LitJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Tools\Json50r6\Bin\Net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminLog\editPasswd.aspx" />
+    <Content Include="AdminLog\index.aspx" />
+    <Content Include="AdminLog\left.aspx" />
+    <Content Include="AdminLog\Login.aspx" />
+    <Content Include="AdminLog\loginOut.aspx" />
+    <Content Include="AdminLog\show.aspx" />
+    <Content Include="AdminLog\tech_log_list.aspx" />
+    <Content Include="AdminLog\tech_log_list_all.aspx" />
+    <Content Include="AdminLog\top.aspx" />
+    <Content Include="Admin\AdminPage\admin_add.aspx" />
+    <Content Include="Admin\AdminPage\admin_edit.aspx" />
+    <Content Include="Admin\AdminPage\admin_list.aspx" />
+    <Content Include="Admin\AdminPage\editPasswd.aspx" />
+    <Content Include="Admin\batchAccountCheckPage\batchAccountCheck.aspx" />
+    <Content Include="Admin\checkMobile.aspx" />
+    <Content Include="Admin\MobilePage\mtemplate_version_add.aspx" />
+    <Content Include="Admin\MobilePage\mtemplate_version_edit.aspx" />
+    <Content Include="Admin\MobilePage\mtemplate_version_list.aspx" />
+    <Content Include="Admin\MobilePage\project_manager.aspx" />
+    <Content Include="Admin\MobilePage\project_manager_add.aspx" />
+    <Content Include="Admin\MobilePage\project_manager_edit.aspx" />
+    <Content Include="Admin\MobilePage\template_menuEdit.aspx" />
+    <Content Include="css\main.css" />
+    <Content Include="Admin\css\style.css" />
+    <Content Include="Admin\EmailTemplatePage\email_template_add.aspx" />
+    <Content Include="Admin\EmailTemplatePage\email_template_edit.aspx" />
+    <Content Include="Admin\EmailTemplatePage\email_template_list.aspx" />
+    <Content Include="Admin\ForbiddenWord\WordAdd.aspx" />
+    <Content Include="Admin\ForbiddenWord\WordEdit.aspx" />
+    <Content Include="Admin\ForbiddenWord\WordList.aspx" />
+    <Content Include="Admin\HtmlTemplatePage\tech_html_template_add.aspx" />
+    <Content Include="Admin\HtmlTemplatePage\tech_html_template_list.aspx" />
+    <Content Include="Admin\HtmlTemplatePage\tech_html_template_edit.aspx" />
+    <Content Include="Admin\HtmlTemplatePage\tech_html_template_list_add.aspx" />
+    <Content Include="Admin\HtmlTemplatePage\tech_html_template_list_edit.aspx" />
+    <Content Include="Admin\HtmlTemplatePage\tech_html_template_list_list.aspx" />
+    <Content Include="Admin\images\404.png" />
+    <Content Include="Admin\images\ablue.gif" />
+    <Content Include="Admin\images\btnbg.png" />
+    <Content Include="Admin\images\btnbg1.png" />
+    <Content Include="Admin\images\btnbg2.png" />
+    <Content Include="Admin\images\buttonbg.png" />
+    <Content Include="Admin\images\c01.png" />
+    <Content Include="Admin\images\c02.png" />
+    <Content Include="Admin\images\c03.png" />
+    <Content Include="Admin\images\cbg.png" />
+    <Content Include="Admin\images\clist.png" />
+    <Content Include="Admin\images\close.png" />
+    <Content Include="Admin\images\close1.png" />
+    <Content Include="Admin\images\cloud.png" />
+    <Content Include="Admin\images\diskbg.png" />
+    <Content Include="Admin\images\help.png" />
+    <Content Include="Admin\images\ibtnbg.png" />
+    <Content Include="Admin\images\icon_css.gif" />
+    <Content Include="Admin\images\icon_img.gif" />
+    <Content Include="Admin\images\inputbg.gif" />
+    <Content Include="Admin\images\itabbg.png" />
+    <Content Include="Admin\images\itabbg1.png" />
+    <Content Include="Admin\images\leftico.png" />
+    <Content Include="Admin\images\leftico01.png" />
+    <Content Include="Admin\images\leftico02.png" />
+    <Content Include="Admin\images\leftline.gif" />
+    <Content Include="Admin\images\leftmenubg.gif" />
+    <Content Include="Admin\images\lefttop.gif" />
+    <Content Include="Admin\images\libg.png" />
+    <Content Include="Admin\images\light.png" />
+    <Content Include="Admin\images\line.gif" />
+    <Content Include="Admin\images\line1.png" />
+    <Content Include="Admin\images\list.gif" />
+    <Content Include="Admin\images\list1.gif" />
+    <Content Include="Admin\images\list2.png" />
+    <Content Include="Admin\images\loginbg1.png" />
+    <Content Include="Admin\images\loginbg2.png" />
+    <Content Include="Admin\images\loginbg3.png" />
+    <Content Include="Admin\images\logininfo.png" />
+    <Content Include="Admin\images\loginlogo.png" />
+    <Content Include="Admin\images\loginpassword.png" />
+    <Content Include="Admin\images\loginsj.png" />
+    <Content Include="Admin\images\loginuser.png" />
+    <Content Include="Admin\images\logo.png" />
+    <Content Include="Admin\images\msg.png" />
+    <Content Include="Admin\images\navbg.png" />
+    <Content Include="Admin\images\next.gif" />
+    <Content Include="Admin\images\pre.gif" />
+    <Content Include="Admin\images\righttop.gif" />
+    <Content Include="Admin\images\rlist.gif" />
+    <Content Include="Admin\images\search.png" />
+    <Content Include="Admin\images\sj.png" />
+    <Content Include="Admin\images\sun.png" />
+    <Content Include="Admin\images\tbg.png" />
+    <Content Include="Admin\images\tcbg.gif" />
+    <Content Include="Admin\images\th.gif" />
+    <Content Include="Admin\images\time.png" />
+    <Content Include="Admin\images\timg.jpg" />
+    <Content Include="Admin\images\toolbg.gif" />
+    <Content Include="Admin\images\topbg.gif" />
+    <Content Include="Admin\images\topleft.jpg" />
+    <Content Include="Admin\images\topright.jpg" />
+    <Content Include="Admin\images\ub1.png" />
+    <Content Include="Admin\images\ulist.png" />
+    <Content Include="Admin\images\user.png" />
+    <Content Include="Admin\images\waiting_03.gif" />
+    <Content Include="Admin\index.aspx" />
+    <Content Include="Admin\left.aspx" />
+    <Content Include="Admin\Login.aspx" />
+    <Content Include="Admin\loginOut.aspx" />
+    <Content Include="Admin\MeetingPage\tech_meeting_add.aspx" />
+    <Content Include="Admin\MeetingPage\tech_meeting_edit.aspx" />
+    <Content Include="Admin\MeetingPage\tech_meeting_list.aspx" />
+    <Content Include="Admin\MeetingPage\tech_meeting_type_add.aspx" />
+    <Content Include="Admin\MeetingPage\tech_meeting_type_edit.aspx" />
+    <Content Include="Admin\MeetingPage\tech_meeting_type_list.aspx" />
+    <Content Include="Admin\MessagePage\add_msg.aspx" />
+    <Content Include="Admin\MessagePage\edit_msg.aspx" />
+    <Content Include="Admin\MessagePage\msg_list.aspx" />
+    <Content Include="Admin\MobilePage\mobile_type_menuEdit.aspx" />
+    <Content Include="Admin\MobilePage\mtemplate_add.aspx" />
+    <Content Include="Admin\MobilePage\mtemplate_edit.aspx" />
+    <Content Include="Admin\MobilePage\mtemplate_list.aspx" />
+    <Content Include="Admin\MobilePage\mtemplate_type_add.aspx" />
+    <Content Include="Admin\MobilePage\mtemplate_type_edit.aspx" />
+    <Content Include="Admin\MobilePage\mtemplate_type_list.aspx" />
+    <Content Include="Admin\MobilePage\mt_open_css.aspx" />
+    <Content Include="Admin\MobilePage\mt_open_thumbnail.aspx" />
+    <Content Include="Admin\OtherPage\article_type_add.aspx" />
+    <Content Include="Admin\OtherPage\article_type_edit.aspx" />
+    <Content Include="Admin\OtherPage\article_type_list.aspx" />
+    <Content Include="Admin\OtherPage\meeting_reg_type_add.aspx" />
+    <Content Include="Admin\OtherPage\meeting_reg_type_edit.aspx" />
+    <Content Include="Admin\OtherPage\meeting_reg_type_list.aspx" />
+    <Content Include="Admin\OtherPage\published_form_add.aspx" />
+    <Content Include="Admin\OtherPage\published_form_edit.aspx" />
+    <Content Include="Admin\OtherPage\published_form_list.aspx" />
+    <Content Include="Admin\PrintPage\PersonAdd.aspx" />
+    <Content Include="Admin\PrintPage\PersonEdit.aspx" />
+    <Content Include="Admin\PrintPage\PersonList.aspx" />
+    <Content Include="Admin\SendMsgPage\SendedMsgList.aspx" />
+    <Content Include="Admin\SendMsgPage\SendMsg.aspx" />
+    <Content Include="Admin\show.aspx" />
+    <Content Include="Admin\TechUserAllPage\meeting_order_list.aspx" />
+    <Content Include="Admin\TechUserAllPage\tech_user_all_list.aspx" />
+    <Content Include="Admin\top.aspx" />
+    <Content Include="Admin\Xenon\404.html" />
+    <Content Include="Admin\Xenon\assets\css\bootstrap.css" />
+    <Content Include="Admin\Xenon\assets\css\custom.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\elusive\css\animation.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\elusive\css\elusive-codes.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\elusive\css\elusive-embedded.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\elusive\css\elusive-ie7-codes.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\elusive\css\elusive-ie7.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\elusive\css\elusive.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\elusive\font\elusive.svg" />
+    <Content Include="Admin\Xenon\assets\css\fonts\elusive\index.html" />
+    <Content Include="Admin\Xenon\assets\css\fonts\fontawesome\css\font-awesome.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\fontawesome\css\font-awesome.min.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\fontawesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Admin\Xenon\assets\css\fonts\fontawesome\index.html" />
+    <Content Include="Admin\Xenon\assets\css\fonts\glyphicons\glyphicons-halflings-regular.svg" />
+    <Content Include="Admin\Xenon\assets\css\fonts\glyphicons\index.html" />
+    <Content Include="Admin\Xenon\assets\css\fonts\index.html" />
+    <Content Include="Admin\Xenon\assets\css\fonts\linecons\css\animation.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\linecons\css\linecons-codes.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\linecons\css\linecons-embedded.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\linecons\css\linecons-ie7-codes.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\linecons\css\linecons-ie7.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\linecons\css\linecons.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\linecons\font\linecons.svg" />
+    <Content Include="Admin\Xenon\assets\css\fonts\linecons\index.html" />
+    <Content Include="Admin\Xenon\assets\css\fonts\meteocons\css\animation.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\meteocons\css\meteocons-codes.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\meteocons\css\meteocons-embedded.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\meteocons\css\meteocons-ie7-codes.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\meteocons\css\meteocons-ie7.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\meteocons\css\meteocons.css" />
+    <Content Include="Admin\Xenon\assets\css\fonts\meteocons\font\meteocons.svg" />
+    <Content Include="Admin\Xenon\assets\css\fonts\meteocons\index.html" />
+    <Content Include="Admin\Xenon\assets\css\index.html" />
+    <Content Include="Admin\Xenon\assets\css\xenon-components.css" />
+    <Content Include="Admin\Xenon\assets\css\xenon-core.css" />
+    <Content Include="Admin\Xenon\assets\css\xenon-forms.css" />
+    <Content Include="Admin\Xenon\assets\css\xenon-skins.css" />
+    <Content Include="Admin\Xenon\assets\css\xenon.css" />
+    <Content Include="Admin\Xenon\assets\images\album-image-full.jpg" />
+    <Content Include="Admin\Xenon\assets\images\album-img-1.png" />
+    <Content Include="Admin\Xenon\assets\images\album-img-2.png" />
+    <Content Include="Admin\Xenon\assets\images\album-img-3.png" />
+    <Content Include="Admin\Xenon\assets\images\album-img-4.png" />
+    <Content Include="Admin\Xenon\assets\images\album-img-5.png" />
+    <Content Include="Admin\Xenon\assets\images\album-img-6.png" />
+    <Content Include="Admin\Xenon\assets\images\album-img-7.png" />
+    <Content Include="Admin\Xenon\assets\images\album-img-8.png" />
+    <Content Include="Admin\Xenon\assets\images\attach-1.png" />
+    <Content Include="Admin\Xenon\assets\images\attach-2.png" />
+    <Content Include="Admin\Xenon\assets\images\clouds.png" />
+    <Content Include="Admin\Xenon\assets\images\eiffel.jpg" />
+    <Content Include="Admin\Xenon\assets\images\image-1.jpg" />
+    <Content Include="Admin\Xenon\assets\images\image-2.jpg" />
+    <Content Include="Admin\Xenon\assets\images\image-3.jpg" />
+    <Content Include="Admin\Xenon\assets\images\image-4.jpg" />
+    <Content Include="Admin\Xenon\assets\images\image-5.jpg" />
+    <Content Include="Admin\Xenon\assets\images\layouts\layout-horizontal-right-sidebar-collapsed.png" />
+    <Content Include="Admin\Xenon\assets\images\layouts\layout-horizontal-right-sidebar.png" />
+    <Content Include="Admin\Xenon\assets\images\layouts\layout-horizontal.png" />
+    <Content Include="Admin\Xenon\assets\images\layouts\layout-sidebar-collapsed-horizontal.png" />
+    <Content Include="Admin\Xenon\assets\images\layouts\layout-sidebar-collapsed.png" />
+    <Content Include="Admin\Xenon\assets\images\layouts\layout-sidebar-horizontal.png" />
+    <Content Include="Admin\Xenon\assets\images\layouts\layout-sidebar-right-collapsed.png" />
+    <Content Include="Admin\Xenon\assets\images\layouts\layout-sidebar-right.png" />
+    <Content Include="Admin\Xenon\assets\images\layouts\layout-sidebar.png" />
+    <Content Include="Admin\Xenon\assets\images\logo%402x.png" />
+    <Content Include="Admin\Xenon\assets\images\logo-collapsed%402x.png" />
+    <Content Include="Admin\Xenon\assets\images\logo-collapsed.png" />
+    <Content Include="Admin\Xenon\assets\images\logo-white-bg%402x.png" />
+    <Content Include="Admin\Xenon\assets\images\logo-white-bg.png" />
+    <Content Include="Admin\Xenon\assets\images\logo.png" />
+    <Content Include="Admin\Xenon\assets\images\news-image-widget-2.png" />
+    <Content Include="Admin\Xenon\assets\images\news-image-widget-3.png" />
+    <Content Include="Admin\Xenon\assets\images\news-image-widget-4.png" />
+    <Content Include="Admin\Xenon\assets\images\news-image-widget.png" />
+    <Content Include="Admin\Xenon\assets\images\notes-lines.png" />
+    <Content Include="Admin\Xenon\assets\images\ok-white-full.png" />
+    <Content Include="Admin\Xenon\assets\images\ok-white.png" />
+    <Content Include="Admin\Xenon\assets\images\ok.png" />
+    <Content Include="Admin\Xenon\assets\images\sample.jpg" />
+    <Content Include="Admin\Xenon\assets\images\user-1.png" />
+    <Content Include="Admin\Xenon\assets\images\user-2.png" />
+    <Content Include="Admin\Xenon\assets\images\user-3.png" />
+    <Content Include="Admin\Xenon\assets\images\user-4.png" />
+    <Content Include="Admin\Xenon\assets\images\user-5.png" />
+    <Content Include="Admin\Xenon\assets\index.html" />
+    <Content Include="Admin\Xenon\assets\js\bootstrap.min.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\adapters\jquery.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\build-config.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\ckeditor.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\config.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\contents.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\index.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\af.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\ar.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\bg.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\bn.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\bs.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\ca.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\cs.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\cy.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\da.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\de.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\el.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\en-au.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\en-ca.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\en-gb.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\en.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\eo.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\es.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\et.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\eu.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\fa.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\fi.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\fo.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\fr-ca.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\fr.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\gl.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\gu.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\he.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\hi.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\hr.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\hu.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\id.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\is.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\it.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\ja.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\ka.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\km.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\ko.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\ku.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\lt.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\lv.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\mk.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\mn.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\ms.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\nb.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\nl.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\no.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\pl.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\pt-br.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\pt.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\ro.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\ru.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\si.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\sk.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\sl.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\sq.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\sr-latn.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\sr.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\sv.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\th.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\tr.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\tt.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\ug.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\uk.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\vi.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\zh-cn.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\lang\zh.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\icons.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\magicline\images\hidpi\icon-rtl.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\magicline\images\icon-rtl.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\ajax.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\api.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\appendto.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\assets\inlineall\logo.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\assets\outputxhtml\outputxhtml.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\assets\sample.jpg" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\assets\uilanguages\languages.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\datafiltering.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\divreplace.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\index.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\inlineall.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\inlinebycode.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\inlinetextarea.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\jquery.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\plugins\dialog\assets\my_dialog.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\plugins\dialog\dialog.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\plugins\enterkey\enterkey.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.swf" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\swfobject.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\plugins\htmlwriter\outputforflash.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\plugins\htmlwriter\outputhtml.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\plugins\magicline\magicline.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\plugins\toolbar\toolbar.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\plugins\wysiwygarea\fullpage.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\readonly.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\replacebyclass.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\replacebycode.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\sample.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\sample.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\tabindex.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\uicolor.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\uilanguages.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\xhtmlstyle.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\dev\icons16.svg" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\dev\icons32.svg" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\dialog.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\dialog_ie.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\dialog_ie7.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\dialog_ie8.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\dialog_iequirks.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\dialog_opera.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\editor.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\editor_gecko.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\editor_ie.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\editor_ie7.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\editor_ie8.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\editor_iequirks.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\icons.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\icons_hidpi.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\images\arrow.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\images\close.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\images\hidpi\close.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\images\hidpi\lock-open.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\images\hidpi\lock.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\images\hidpi\refresh.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\images\lock-open.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\images\lock.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\images\refresh.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\sample\bootstrapck-sample.html" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\sample\css\bootstrapck-sample.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\sample\js\analytics.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\sample\js\jquery-1.11.0.min.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\skin.js" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\dialog.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\dialog_ie.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\dialog_ie7.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\dialog_ie8.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\dialog_iequirks.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\editor.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\editor_gecko.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\editor_ie.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\editor_ie7.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\editor_ie8.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\editor_iequirks.css" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\icons.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\icons_hidpi.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\images\arrow.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\images\close.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\images\hidpi\close.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\images\hidpi\lock.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\images\lock-open.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\images\lock.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\images\refresh.png" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\styles.js" />
+    <Content Include="Admin\Xenon\assets\js\cloud.js" />
+    <Content Include="Admin\Xenon\assets\js\colorpicker\bootstrap-colorpicker.min.js" />
+    <Content Include="Admin\Xenon\assets\js\colorpicker\images\alpha-horizontal.png" />
+    <Content Include="Admin\Xenon\assets\js\colorpicker\images\alpha.png" />
+    <Content Include="Admin\Xenon\assets\js\colorpicker\images\hue-horizontal.png" />
+    <Content Include="Admin\Xenon\assets\js\colorpicker\images\hue.png" />
+    <Content Include="Admin\Xenon\assets\js\colorpicker\images\saturation.png" />
+    <Content Include="Admin\Xenon\assets\js\colorpicker\index.html" />
+    <Content Include="Admin\Xenon\assets\js\cropper\cropper.css" />
+    <Content Include="Admin\Xenon\assets\js\cropper\cropper.js" />
+    <Content Include="Admin\Xenon\assets\js\cropper\cropper.min.css" />
+    <Content Include="Admin\Xenon\assets\js\cropper\cropper.min.js" />
+    <Content Include="Admin\Xenon\assets\js\cropper\index.html" />
+    <Content Include="Admin\Xenon\assets\js\datatables\css\jquery.dataTables.css" />
+    <Content Include="Admin\Xenon\assets\js\datatables\css\jquery.dataTables.min.css" />
+    <Content Include="Admin\Xenon\assets\js\datatables\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Admin\Xenon\assets\js\datatables\dataTables.bootstrap.css" />
+    <Content Include="Admin\Xenon\assets\js\datatables\dataTables.bootstrap.js" />
+    <Content Include="Admin\Xenon\assets\js\datatables\images\back_disabled.png" />
+    <Content Include="Admin\Xenon\assets\js\datatables\images\back_enabled.png" />
+    <Content Include="Admin\Xenon\assets\js\datatables\images\back_enabled_hover.png" />
+    <Content Include="Admin\Xenon\assets\js\datatables\images\favicon.ico" />
+    <Content Include="Admin\Xenon\assets\js\datatables\images\forward_disabled.png" />
+    <Content Include="Admin\Xenon\assets\js\datatables\images\forward_enabled.png" />
+    <Content Include="Admin\Xenon\assets\js\datatables\images\forward_enabled_hover.png" />
+    <Content Include="Admin\Xenon\assets\js\datatables\images\sort_asc.png" />
+    <Content Include="Admin\Xenon\assets\js\datatables\images\sort_asc_disabled.png" />
+    <Content Include="Admin\Xenon\assets\js\datatables\images\sort_both.png" />
+    <Content Include="Admin\Xenon\assets\js\datatables\images\sort_desc.png" />
+    <Content Include="Admin\Xenon\assets\js\datatables\images\sort_desc_disabled.png" />
+    <Content Include="Admin\Xenon\assets\js\datatables\index.html" />
+    <Content Include="Admin\Xenon\assets\js\datatables\js\jquery.dataTables.js" />
+    <Content Include="Admin\Xenon\assets\js\datatables\js\jquery.dataTables.min.js" />
+    <Content Include="Admin\Xenon\assets\js\datatables\js\jquery.js" />
+    <Content Include="Admin\Xenon\assets\js\datatables\tabletools\copy_csv_xls.swf" />
+    <Content Include="Admin\Xenon\assets\js\datatables\tabletools\copy_csv_xls_pdf.swf" />
+    <Content Include="Admin\Xenon\assets\js\datatables\tabletools\dataTables.tableTools.css" />
+    <Content Include="Admin\Xenon\assets\js\datatables\tabletools\dataTables.tableTools.min.js" />
+    <Content Include="Admin\Xenon\assets\js\datatables\yadcf\jquery.dataTables.yadcf.css" />
+    <Content Include="Admin\Xenon\assets\js\datatables\yadcf\jquery.dataTables.yadcf.js" />
+    <Content Include="Admin\Xenon\assets\js\datepicker\bootstrap-datepicker.js" />
+    <Content Include="Admin\Xenon\assets\js\datepicker\index.html" />
+    <Content Include="Admin\Xenon\assets\js\daterangepicker\daterangepicker-bs2.css" />
+    <Content Include="Admin\Xenon\assets\js\daterangepicker\daterangepicker-bs3.css" />
+    <Content Include="Admin\Xenon\assets\js\daterangepicker\daterangepicker.js" />
+    <Content Include="Admin\Xenon\assets\js\daterangepicker\index.html" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\css\dx.android.holo-dark.css" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\css\dx.android.holo-light.css" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\css\dx.common.css" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\css\dx.dark.css" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\css\dx.exporter.dark.css" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\css\dx.exporter.light.css" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\css\dx.ios.default.css" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\css\dx.ios7.default.css" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\css\dx.light.css" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\css\dx.spa.css" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\css\dx.win8.black.css" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\css\dx.win8.white.css" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\index.html" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\dx.chartjs.debug.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\dx.chartjs.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\dx.exporter.debug.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\dx.exporter.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\dx.webappjs.debug.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\dx.webappjs.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\globalize.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\globalize.min.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\jquery-1.11.1.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\jquery-1.11.1.min.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\jquery-2.1.1.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\jquery-2.1.1.min.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\knockout-3.1.0.debug.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\knockout-3.1.0.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\localization\dx.webappjs.de.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\localization\dx.webappjs.fr.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\localization\dx.webappjs.ja.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\localization\dx.webappjs.ru.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-core.debug.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-core.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-framework.debug.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-framework.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-viz-charts.debug.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-viz-charts.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-viz-core.debug.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-viz-core.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-viz-gauges.debug.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-viz-gauges.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-viz-rangeselector.debug.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-viz-rangeselector.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-viz-sparklines.debug.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-viz-sparklines.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-viz-vectormap.debug.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-viz-vectormap.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-widgets-base.debug.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-widgets-base.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-widgets-web.debug.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\modules\dx.module-widgets-web.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\vectormap-data\africa.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\vectormap-data\canada.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\vectormap-data\eurasia.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\vectormap-data\europe.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\vectormap-data\usa.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\vectormap-data\world.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\vectormap-utils\dx.vectormaputils.debug.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\vectormap-utils\dx.vectormaputils.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\js\vectormap-utils\dx.vectormaputils.node.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\layouts\Desktop\DesktopLayout.css" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\layouts\Desktop\DesktopLayout.html" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\layouts\Desktop\DesktopLayout.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\layouts\Empty\EmptyLayout.css" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\layouts\Empty\EmptyLayout.html" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\layouts\Empty\EmptyLayout.js" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\ts\dx.all.d.ts" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\ts\dx.chartjs.d.ts" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\ts\dx.webappjs.d.ts" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\ts\globalize.d.ts" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\ts\jquery.d.ts" />
+    <Content Include="Admin\Xenon\assets\js\dropzone\css\basic.css" />
+    <Content Include="Admin\Xenon\assets\js\dropzone\css\dropzone.css" />
+    <Content Include="Admin\Xenon\assets\js\dropzone\dropzone-amd-module.min.js" />
+    <Content Include="Admin\Xenon\assets\js\dropzone\dropzone.min.js" />
+    <Content Include="Admin\Xenon\assets\js\dropzone\images\spritemap%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\dropzone\images\spritemap.png" />
+    <Content Include="Admin\Xenon\assets\js\dropzone\index.html" />
+    <Content Include="Admin\Xenon\assets\js\formwizard\index.html" />
+    <Content Include="Admin\Xenon\assets\js\formwizard\jquery.bootstrap.wizard.js" />
+    <Content Include="Admin\Xenon\assets\js\formwizard\jquery.bootstrap.wizard.min.js" />
+    <Content Include="Admin\Xenon\assets\js\fullcalendar\fullcalendar.css" />
+    <Content Include="Admin\Xenon\assets\js\fullcalendar\fullcalendar.js" />
+    <Content Include="Admin\Xenon\assets\js\fullcalendar\fullcalendar.min.css" />
+    <Content Include="Admin\Xenon\assets\js\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Admin\Xenon\assets\js\fullcalendar\fullcalendar.print.css" />
+    <Content Include="Admin\Xenon\assets\js\fullcalendar\index.html" />
+    <Content Include="Admin\Xenon\assets\js\fullcalendar\moment.min.js" />
+    <Content Include="Admin\Xenon\assets\js\handlebars.min.js" />
+    <Content Include="Admin\Xenon\assets\js\icheck\icheck.min.js" />
+    <Content Include="Admin\Xenon\assets\js\icheck\index.html" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\all.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\aero%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\aero.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\aero.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\blue%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\blue.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\blue.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\flat%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\flat.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\flat.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\green%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\green.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\green.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\grey%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\grey.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\grey.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\orange%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\orange.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\orange.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\pink%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\pink.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\pink.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\purple%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\purple.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\purple.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\red%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\red.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\red.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\yellow%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\yellow.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\yellow.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\flat\_all.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\futurico\futurico%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\futurico\futurico.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\futurico\futurico.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\line\aero.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\line\blue.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\line\green.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\line\grey.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\line\line%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\line\line.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\line\line.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\line\orange.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\line\pink.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\line\purple.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\line\red.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\line\yellow.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\line\_all.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\aero%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\aero.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\aero.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\blue%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\blue.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\blue.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\green%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\green.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\green.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\grey%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\grey.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\grey.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\minimal%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\minimal.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\minimal.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\orange%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\orange.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\orange.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\pink%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\pink.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\pink.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\purple%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\purple.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\purple.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\red%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\red.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\red.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\yellow%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\yellow.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\yellow.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\minimal\_all.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\polaris\polaris%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\polaris\polaris.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\polaris\polaris.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\aero%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\aero.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\aero.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\blue%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\blue.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\blue.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\green%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\green.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\green.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\grey%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\grey.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\grey.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\orange%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\orange.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\orange.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\pink%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\pink.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\pink.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\purple%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\purple.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\purple.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\red%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\red.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\red.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\square%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\square.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\square.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\yellow%402x.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\yellow.css" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\yellow.png" />
+    <Content Include="Admin\Xenon\assets\js\icheck\skins\square\_all.css" />
+    <Content Include="Admin\Xenon\assets\js\index.html" />
+    <Content Include="Admin\Xenon\assets\js\inputmask\index.html" />
+    <Content Include="Admin\Xenon\assets\js\inputmask\inputmask\jquery.inputmask.date.extensions.js" />
+    <Content Include="Admin\Xenon\assets\js\inputmask\inputmask\jquery.inputmask.extensions.js" />
+    <Content Include="Admin\Xenon\assets\js\inputmask\inputmask\jquery.inputmask.js" />
+    <Content Include="Admin\Xenon\assets\js\inputmask\inputmask\jquery.inputmask.numeric.extensions.js" />
+    <Content Include="Admin\Xenon\assets\js\inputmask\inputmask\jquery.inputmask.phone.extensions.js" />
+    <Content Include="Admin\Xenon\assets\js\inputmask\inputmask\jquery.inputmask.regex.extensions.js" />
+    <Content Include="Admin\Xenon\assets\js\inputmask\jquery.inputmask.bundle.js" />
+    <Content Include="Admin\Xenon\assets\js\joinable.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-1.11.1.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-ui\external\jquery\jquery.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-ui\index.html" />
+    <Content Include="Admin\Xenon\assets\js\jquery-ui\jquery-ui.css" />
+    <Content Include="Admin\Xenon\assets\js\jquery-ui\jquery-ui.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-ui\jquery-ui.min.css" />
+    <Content Include="Admin\Xenon\assets\js\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-ui\jquery-ui.structure.css" />
+    <Content Include="Admin\Xenon\assets\js\jquery-ui\jquery-ui.structure.min.css" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\additional-methods.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\additional-methods.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\index.html" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\jquery.validate.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\jquery.validate.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_ar.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_ar.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_bg.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_bg.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_ca.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_ca.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_cs.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_cs.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_da.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_da.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_de.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_de.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_el.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_el.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_es.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_es.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_es_AR.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_es_AR.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_et.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_et.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_eu.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_eu.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_fa.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_fa.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_fi.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_fi.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_fr.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_fr.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_gl.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_gl.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_he.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_he.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_hr.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_hr.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_hu.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_hu.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_id.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_id.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_is.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_is.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_it.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_it.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_ja.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_ja.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_ka.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_ka.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_kk.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_kk.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_ko.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_ko.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_lt.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_lt.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_lv.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_lv.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_my.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_my.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_nl.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_nl.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_no.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_no.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_pl.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_pl.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_pt_BR.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_pt_BR.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_pt_PT.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_pt_PT.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_ro.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_ro.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_ru.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_ru.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_si.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_si.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_sk.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_sk.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_sl.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_sl.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_sr.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_sr.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_sr_lat.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_sr_lat.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_sv.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_sv.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_th.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_th.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_tj.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_tj.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_tr.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_tr.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_uk.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_uk.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_vi.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_vi.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_zh.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_zh.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_zh_TW.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\messages_zh_TW.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\methods_de.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\methods_de.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\methods_es_CL.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\methods_es_CL.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\methods_fi.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\methods_fi.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\methods_nl.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\methods_nl.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\methods_pt.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\localization\methods_pt.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jquery.mousewheel.js" />
+    <Content Include="Admin\Xenon\assets\js\jvectormap\index.html" />
+    <Content Include="Admin\Xenon\assets\js\jvectormap\jquery-jvectormap-1.1.1.css" />
+    <Content Include="Admin\Xenon\assets\js\jvectormap\jquery-jvectormap-1.1.1.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jvectormap\jquery-jvectormap-1.2.2.css" />
+    <Content Include="Admin\Xenon\assets\js\jvectormap\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="Admin\Xenon\assets\js\jvectormap\regions\jquery-jvectormap-it-mill-en.js" />
+    <Content Include="Admin\Xenon\assets\js\jvectormap\regions\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Admin\Xenon\assets\js\knob\index.html" />
+    <Content Include="Admin\Xenon\assets\js\knob\jquery.knob.min.js" />
+    <Content Include="Admin\Xenon\assets\js\moment.min.js" />
+    <Content Include="Admin\Xenon\assets\js\multiselect\css\index.html" />
+    <Content Include="Admin\Xenon\assets\js\multiselect\css\multi-select.css" />
+    <Content Include="Admin\Xenon\assets\js\multiselect\img\index.html" />
+    <Content Include="Admin\Xenon\assets\js\multiselect\img\switch.png" />
+    <Content Include="Admin\Xenon\assets\js\multiselect\index.html" />
+    <Content Include="Admin\Xenon\assets\js\multiselect\js\index.html" />
+    <Content Include="Admin\Xenon\assets\js\multiselect\js\jquery.multi-select.js" />
+    <Content Include="Admin\Xenon\assets\js\resizeable.js" />
+    <Content Include="Admin\Xenon\assets\js\rwd-table\css\rwd-table.css" />
+    <Content Include="Admin\Xenon\assets\js\rwd-table\css\rwd-table.min.css" />
+    <Content Include="Admin\Xenon\assets\js\rwd-table\index.html" />
+    <Content Include="Admin\Xenon\assets\js\rwd-table\js\rwd-table.js" />
+    <Content Include="Admin\Xenon\assets\js\rwd-table\js\rwd-table.min.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\index.html" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2-bootstrap.css" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2-spinner.gif" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2.css" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2.min.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2.png" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2x2.png" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_ar.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_az.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_bg.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_ca.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_cs.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_da.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_de.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_el.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_es.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_et.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_eu.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_fa.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_fi.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_fr.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_gl.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_he.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_hr.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_hu.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_id.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_is.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_it.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_ja.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_ka.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_ko.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_lt.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_lv.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_mk.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_ms.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_nl.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_no.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_pl.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_pt-BR.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_pt-PT.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_ro.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_rs.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_ru.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_sk.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_sv.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_th.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_tr.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_ug-CN.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_uk.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_vi.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_zh-CN.js" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_zh-TW.js" />
+    <Content Include="Admin\Xenon\assets\js\selectboxit\index.html" />
+    <Content Include="Admin\Xenon\assets\js\selectboxit\jquery.selectBoxIt.css" />
+    <Content Include="Admin\Xenon\assets\js\selectboxit\jquery.selectBoxIt.min.js" />
+    <Content Include="Admin\Xenon\assets\js\tagsinput\bootstrap-tagsinput.css" />
+    <Content Include="Admin\Xenon\assets\js\tagsinput\bootstrap-tagsinput.js" />
+    <Content Include="Admin\Xenon\assets\js\tagsinput\bootstrap-tagsinput.min.js" />
+    <Content Include="Admin\Xenon\assets\js\tagsinput\index.html" />
+    <Content Include="Admin\Xenon\assets\js\timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="Admin\Xenon\assets\js\timepicker\index.html" />
+    <Content Include="Admin\Xenon\assets\js\toastr\index.html" />
+    <Content Include="Admin\Xenon\assets\js\toastr\toastr-icon.png" />
+    <Content Include="Admin\Xenon\assets\js\toastr\toastr.css" />
+    <Content Include="Admin\Xenon\assets\js\toastr\toastr.js" />
+    <Content Include="Admin\Xenon\assets\js\toastr\toastr.min.css" />
+    <Content Include="Admin\Xenon\assets\js\toastr\toastr.min.js" />
+    <Content Include="Admin\Xenon\assets\js\tocify\index.html" />
+    <Content Include="Admin\Xenon\assets\js\tocify\jquery.tocify.css" />
+    <Content Include="Admin\Xenon\assets\js\tocify\jquery.tocify.min.js" />
+    <Content Include="Admin\Xenon\assets\js\TweenLite.min.js" />
+    <Content Include="Admin\Xenon\assets\js\TweenMax.min.js" />
+    <Content Include="Admin\Xenon\assets\js\typeahead.bundle.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\css\addons\uikit.addons.css" />
+    <Content Include="Admin\Xenon\assets\js\uikit\css\addons\uikit.addons.min.css" />
+    <Content Include="Admin\Xenon\assets\js\uikit\css\addons\uikit.almost-flat.addons.css" />
+    <Content Include="Admin\Xenon\assets\js\uikit\css\addons\uikit.almost-flat.addons.min.css" />
+    <Content Include="Admin\Xenon\assets\js\uikit\css\addons\uikit.gradient.addons.css" />
+    <Content Include="Admin\Xenon\assets\js\uikit\css\addons\uikit.gradient.addons.min.css" />
+    <Content Include="Admin\Xenon\assets\js\uikit\css\index.html" />
+    <Content Include="Admin\Xenon\assets\js\uikit\css\uikit.almost-flat.css" />
+    <Content Include="Admin\Xenon\assets\js\uikit\css\uikit.almost-flat.min.css" />
+    <Content Include="Admin\Xenon\assets\js\uikit\css\uikit.css" />
+    <Content Include="Admin\Xenon\assets\js\uikit\css\uikit.gradient.css" />
+    <Content Include="Admin\Xenon\assets\js\uikit\css\uikit.gradient.min.css" />
+    <Content Include="Admin\Xenon\assets\js\uikit\css\uikit.min.css" />
+    <Content Include="Admin\Xenon\assets\js\uikit\fonts\index.html" />
+    <Content Include="Admin\Xenon\assets\js\uikit\index.html" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\autocomplete.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\autocomplete.min.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\cover.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\cover.min.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\datepicker.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\datepicker.min.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\form-password.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\form-password.min.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\form-select.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\form-select.min.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\htmleditor.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\htmleditor.min.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\nestable.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\nestable.min.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\notify.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\notify.min.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\pagination.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\pagination.min.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\search.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\search.min.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\sortable.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\sortable.min.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\sticky.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\sticky.min.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\timepicker.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\timepicker.min.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\upload.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\addons\upload.min.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\index.html" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\uikit.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\js\uikit.min.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\index.html" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\uikit.css" />
+    <Content Include="Admin\Xenon\assets\js\uikit\uikit.css" />
+    <Content Include="Admin\Xenon\assets\js\uikit\vendor\codemirror\codemirror.css" />
+    <Content Include="Admin\Xenon\assets\js\uikit\vendor\codemirror\codemirror.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\vendor\codemirror\show-hint.css" />
+    <Content Include="Admin\Xenon\assets\js\uikit\vendor\customizer.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\vendor\highlight\highlight.css" />
+    <Content Include="Admin\Xenon\assets\js\uikit\vendor\highlight\highlight.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\vendor\highlight\test.html" />
+    <Content Include="Admin\Xenon\assets\js\uikit\vendor\holder.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\vendor\index.html" />
+    <Content Include="Admin\Xenon\assets\js\uikit\vendor\jquery.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\vendor\jquery.less.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\vendor\jquery.mustache.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\vendor\jquery.rtl.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\vendor\less.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\vendor\marked.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\vendor\spectrum\spectrum.css" />
+    <Content Include="Admin\Xenon\assets\js\uikit\vendor\spectrum\spectrum.js" />
+    <Content Include="Admin\Xenon\assets\js\uikit\vendor\spectrum\test.html" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\index.html" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\css\bootstrap-responsive.css" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\css\bootstrap-responsive.min.css" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\css\bootstrap.css" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\css\bootstrap.min.css" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\css\index.html" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\css\prettify.css" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\css\wysiwyg-color.css" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\img\glyphicons-halflings-white.png" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\img\glyphicons-halflings.png" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\img\index.html" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\index.html" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\js\bootstrap-button.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\js\bootstrap.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\js\bootstrap.min.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\js\index.html" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\js\jquery-1.7.2.min.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\js\prettify.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\js\wysihtml5-0.3.0.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\js\wysihtml5-0.3.0.min.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\bootstrap-wysihtml5.css" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\bootstrap-wysihtml5.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\index.html" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.ar-AR.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.bg-BG.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.ca-CT.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.cs-CZ.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.da-DK.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.de-DE.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.el-GR.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.es-AR.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.es-ES.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.fr-FR.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.hr-HR.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.it-IT.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.ja-JP.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.ko-KR.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.lt-LT.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.mo-MD.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.nb-NB.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.nl-NL.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.pl-PL.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.pt-BR.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.ru-RU.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.sk-SK.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.sv-SE.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.tr-TR.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.ua-UA.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.zh-CN.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\bootstrap-wysihtml5.zh-TW.js" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\src\locales\index.html" />
+    <Content Include="Admin\Xenon\assets\js\xenon-api.js" />
+    <Content Include="Admin\Xenon\assets\js\xenon-custom.js" />
+    <Content Include="Admin\Xenon\assets\js\xenon-notes.js" />
+    <Content Include="Admin\Xenon\assets\js\xenon-toggles.js" />
+    <Content Include="Admin\Xenon\assets\js\xenon-widgets.js" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\index.html" />
+    <Content Include="Admin\Xenon\assets\less\index.html" />
+    <Content Include="Admin\Xenon\assets\less\other-less\index.html" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\index.html" />
+    <Content Include="Admin\Xenon\blank-menu-horizontal-boxed.html" />
+    <Content Include="Admin\Xenon\blank-menu-horizontal-minimal.html" />
+    <Content Include="Admin\Xenon\blank-menu-horizontal.html" />
+    <Content Include="Admin\Xenon\blank-sidebar-collapsed-horizontal.html" />
+    <Content Include="Admin\Xenon\blank-sidebar-collapsed-right-horizontal.html" />
+    <Content Include="Admin\Xenon\blank-sidebar-collapsed-right.html" />
+    <Content Include="Admin\Xenon\blank-sidebar-collapsed.html" />
+    <Content Include="Admin\Xenon\blank-sidebar-horizontal-menu.html" />
+    <Content Include="Admin\Xenon\blank-sidebar-right-horizontal-menu.html" />
+    <Content Include="Admin\Xenon\blank-sidebar-right.html" />
+    <Content Include="Admin\Xenon\blank-sidebar-static.html" />
+    <Content Include="Admin\Xenon\blank-sidebar.html" />
+    <Content Include="Admin\Xenon\charts-bar-gauges.html" />
+    <Content Include="Admin\Xenon\charts-gauges-linear.html" />
+    <Content Include="Admin\Xenon\charts-gauges.html" />
+    <Content Include="Admin\Xenon\charts-main.html" />
+    <Content Include="Admin\Xenon\charts-map.html" />
+    <Content Include="Admin\Xenon\charts-range.html" />
+    <Content Include="Admin\Xenon\charts-sparklines.html" />
+    <Content Include="Admin\Xenon\dashboard-1.html" />
+    <Content Include="Admin\Xenon\dashboard-2.html" />
+    <Content Include="Admin\Xenon\dashboard-3.html" />
+    <Content Include="Admin\Xenon\dashboard-4.html" />
+    <Content Include="Admin\Xenon\data\ajax-content.txt" />
+    <Content Include="Admin\Xenon\data\harry-potter-covers\1.jpg" />
+    <Content Include="Admin\Xenon\data\harry-potter-covers\2.jpg" />
+    <Content Include="Admin\Xenon\data\harry-potter-covers\3.jpg" />
+    <Content Include="Admin\Xenon\data\harry-potter-covers\4.jpg" />
+    <Content Include="Admin\Xenon\data\harry-potter-covers\5.jpg" />
+    <Content Include="Admin\Xenon\data\harry-potter-covers\6.jpg" />
+    <Content Include="Admin\Xenon\data\harry-potter-covers\7.jpg" />
+    <Content Include="Admin\Xenon\data\index.html" />
+    <Content Include="Admin\Xenon\data\vw1.jpg" />
+    <Content Include="Admin\Xenon\extra-calendar.html" />
+    <Content Include="Admin\Xenon\extra-gallery.html" />
+    <Content Include="Admin\Xenon\extra-icons-elusive.html" />
+    <Content Include="Admin\Xenon\extra-icons-fontawesome.html" />
+    <Content Include="Admin\Xenon\extra-icons-linecons.html" />
+    <Content Include="Admin\Xenon\extra-icons-meteocons.html" />
+    <Content Include="Admin\Xenon\extra-image-crop.html" />
+    <Content Include="Admin\Xenon\extra-invoice.html" />
+    <Content Include="Admin\Xenon\extra-loader.html" />
+    <Content Include="Admin\Xenon\extra-lockscreen.html" />
+    <Content Include="Admin\Xenon\extra-login-light.html" />
+    <Content Include="Admin\Xenon\extra-login.html" />
+    <Content Include="Admin\Xenon\extra-maps-advanced.html" />
+    <Content Include="Admin\Xenon\extra-maps-google.html" />
+    <Content Include="Admin\Xenon\extra-maps-vector.html" />
+    <Content Include="Admin\Xenon\extra-nestable-lists.html" />
+    <Content Include="Admin\Xenon\extra-not-found.html" />
+    <Content Include="Admin\Xenon\extra-notes.html" />
+    <Content Include="Admin\Xenon\extra-notifications.html" />
+    <Content Include="Admin\Xenon\extra-page-loading-ol.html" />
+    <Content Include="Admin\Xenon\extra-portlets.html" />
+    <Content Include="Admin\Xenon\extra-profile.html" />
+    <Content Include="Admin\Xenon\extra-scrollable.html" />
+    <Content Include="Admin\Xenon\extra-search.html" />
+    <Content Include="Admin\Xenon\extra-timeline-center.html" />
+    <Content Include="Admin\Xenon\extra-timeline.html" />
+    <Content Include="Admin\Xenon\extra-tocify.html" />
+    <Content Include="Admin\Xenon\forms-advanced.html" />
+    <Content Include="Admin\Xenon\forms-editors.html" />
+    <Content Include="Admin\Xenon\forms-file-upload.html" />
+    <Content Include="Admin\Xenon\forms-icheck.html" />
+    <Content Include="Admin\Xenon\forms-input-masks.html" />
+    <Content Include="Admin\Xenon\forms-native.html" />
+    <Content Include="Admin\Xenon\forms-sliders.html" />
+    <Content Include="Admin\Xenon\forms-validation.html" />
+    <Content Include="Admin\Xenon\forms-wizard.html" />
+    <Content Include="Admin\Xenon\layout-boxed-horizontal-menu.html" />
+    <Content Include="Admin\Xenon\layout-boxed.html" />
+    <Content Include="Admin\Xenon\layout-chat-open.html" />
+    <Content Include="Admin\Xenon\layout-collapsed-sidebar.html" />
+    <Content Include="Admin\Xenon\layout-horizontal-fixed-sidebar-menu-static.html" />
+    <Content Include="Admin\Xenon\layout-horizontal-menu-boxed.html" />
+    <Content Include="Admin\Xenon\layout-horizontal-menu-click-to-open-subs.html" />
+    <Content Include="Admin\Xenon\layout-horizontal-menu-min.html" />
+    <Content Include="Admin\Xenon\layout-horizontal-menu-static.html" />
+    <Content Include="Admin\Xenon\layout-horizontal-menu.html" />
+    <Content Include="Admin\Xenon\layout-horizontal-plus-sidebar.html" />
+    <Content Include="Admin\Xenon\layout-horizontal-right-fixed-sidebar-menu-static.html" />
+    <Content Include="Admin\Xenon\layout-horizontal-right-sidebar-menu-static.html" />
+    <Content Include="Admin\Xenon\layout-horizontal-right-sidebar-menu.html" />
+    <Content Include="Admin\Xenon\layout-horizontal-sidebar-menu-collapsed-right.html" />
+    <Content Include="Admin\Xenon\layout-horizontal-sidebar-menu-collapsed.html" />
+    <Content Include="Admin\Xenon\layout-horizontal-sidebar-menu-static.html" />
+    <Content Include="Admin\Xenon\layout-horizontal-static-sidebar-menu-collapsed-right.html" />
+    <Content Include="Admin\Xenon\layout-horizontal-static-sidebar-menu-collapsed.html" />
+    <Content Include="Admin\Xenon\layout-right-collapsed-sidebar-chat-open.html" />
+    <Content Include="Admin\Xenon\layout-right-collapsed-sidebar.html" />
+    <Content Include="Admin\Xenon\layout-right-sidebar-static.html" />
+    <Content Include="Admin\Xenon\layout-right-sidebar.html" />
+    <Content Include="Admin\Xenon\layout-static-sidebar.html" />
+    <Content Include="Admin\Xenon\layout-variants.html" />
+    <Content Include="Admin\Xenon\layout-without-submenu-toggle-right.html" />
+    <Content Include="Admin\Xenon\layout-without-submenu-toggle.html" />
+    <Content Include="Admin\Xenon\mailbox-compose.html" />
+    <Content Include="Admin\Xenon\mailbox-main.html" />
+    <Content Include="Admin\Xenon\mailbox-message.html" />
+    <Content Include="Admin\Xenon\skin-aero.html" />
+    <Content Include="Admin\Xenon\skin-concrete.html" />
+    <Content Include="Admin\Xenon\skin-facebook.html" />
+    <Content Include="Admin\Xenon\skin-generator.html" />
+    <Content Include="Admin\Xenon\skin-green.html" />
+    <Content Include="Admin\Xenon\skin-horizontal-aero.html" />
+    <Content Include="Admin\Xenon\skin-horizontal-concrete.html" />
+    <Content Include="Admin\Xenon\skin-horizontal-facebook.html" />
+    <Content Include="Admin\Xenon\skin-horizontal-green.html" />
+    <Content Include="Admin\Xenon\skin-horizontal-lemonade.html" />
+    <Content Include="Admin\Xenon\skin-horizontal-lime.html" />
+    <Content Include="Admin\Xenon\skin-horizontal-navy.html" />
+    <Content Include="Admin\Xenon\skin-horizontal-purple.html" />
+    <Content Include="Admin\Xenon\skin-horizontal-watermelon.html" />
+    <Content Include="Admin\Xenon\skin-horizontal-white.html" />
+    <Content Include="Admin\Xenon\skin-lemonade.html" />
+    <Content Include="Admin\Xenon\skin-lime.html" />
+    <Content Include="Admin\Xenon\skin-navy.html" />
+    <Content Include="Admin\Xenon\skin-purple.html" />
+    <Content Include="Admin\Xenon\skin-watermelon.html" />
+    <Content Include="Admin\Xenon\skin-white.html" />
+    <Content Include="Admin\Xenon\tables-basic.html" />
+    <Content Include="Admin\Xenon\tables-datatables.html" />
+    <Content Include="Admin\Xenon\tables-responsive.html" />
+    <Content Include="Admin\Xenon\ui-alerts.html" />
+    <Content Include="Admin\Xenon\ui-blockquotes.html" />
+    <Content Include="Admin\Xenon\ui-breadcrumbs.html" />
+    <Content Include="Admin\Xenon\ui-buttons.html" />
+    <Content Include="Admin\Xenon\ui-modals.html" />
+    <Content Include="Admin\Xenon\ui-navbars.html" />
+    <Content Include="Admin\Xenon\ui-other-elements.html" />
+    <Content Include="Admin\Xenon\ui-pagination.html" />
+    <Content Include="Admin\Xenon\ui-panels.html" />
+    <Content Include="Admin\Xenon\ui-progressbars.html" />
+    <Content Include="Admin\Xenon\ui-tabs-accordions.html" />
+    <Content Include="Admin\Xenon\ui-typography.html" />
+    <Content Include="Admin\Xenon\ui-widgets.html" />
+    <Content Include="CommonPage\VeCode.aspx" />
+    <Content Include="crm\unsubscribeEmail.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="img\1-1.gif" />
+    <Content Include="img\7-4.gif" />
+    <Content Include="img\ablue.gif" />
+    <Content Include="img\awhite.gif" />
+    <Content Include="img\hidebtn.gif" />
+    <Content Include="img\home16.gif" />
+    <Content Include="img\Huiyuanxinxifabu.png" />
+    <Content Include="img\i-muban.png" />
+    <Content Include="img\i-muban1.png" />
+    <Content Include="img\i-quanxian.png" />
+    <Content Include="img\i-quanxian1.png" />
+    <Content Include="img\i-qunfa.png" />
+    <Content Include="img\i-qunfa1.png" />
+    <Content Include="img\i-richeng.png" />
+    <Content Include="img\i-richeng1.png" />
+    <Content Include="img\i-shezhi.png" />
+    <Content Include="img\i-shezhi1.png" />
+    <Content Include="img\i-tongji.png" />
+    <Content Include="img\i-tongji1.png" />
+    <Content Include="img\i-wangzhan.png" />
+    <Content Include="img\i-wangzhan1.png" />
+    <Content Include="img\i-xianchang.png" />
+    <Content Include="img\i-xianchang1.png" />
+    <Content Include="img\i-zhanshang.png" />
+    <Content Include="img\i-zhanshang1.png" />
+    <Content Include="img\i-zhaoshang.png" />
+    <Content Include="img\i-zhaoshang1.png" />
+    <Content Include="img\i-zhengwen.png" />
+    <Content Include="img\i-zhengwen1.png" />
+    <Content Include="img\i-zhusu.png" />
+    <Content Include="img\i-zhusu1.png" />
+    <Content Include="img\icons\0.png" />
+    <Content Include="img\icons\add.png" />
+    <Content Include="img\icons\add_square.png" />
+    <Content Include="img\icons\black_board.png" />
+    <Content Include="img\icons\blue_lego.png" />
+    <Content Include="img\icons\bonsai.png" />
+    <Content Include="img\icons\bookmark.png" />
+    <Content Include="img\icons\bullet_black.png" />
+    <Content Include="img\icons\calculator.png" />
+    <Content Include="img\icons\calendar.png" />
+    <Content Include="img\icons\calendar1.png" />
+    <Content Include="img\icons\caution.png" />
+    <Content Include="img\icons\charged.png" />
+    <Content Include="img\icons\charge_100.png" />
+    <Content Include="img\icons\charge_20.png" />
+    <Content Include="img\icons\charge_50.png" />
+    <Content Include="img\icons\charge_75.png" />
+    <Content Include="img\icons\charging.png" />
+    <Content Include="img\icons\clapperboard.png" />
+    <Content Include="img\icons\clapperboard_open.png" />
+    <Content Include="img\icons\clear_all_user.png" />
+    <Content Include="img\icons\clipped_id.png" />
+    <Content Include="img\icons\clock_48.png" />
+    <Content Include="img\icons\close.png" />
+    <Content Include="img\icons\comment_48.png" />
+    <Content Include="img\icons\compact_disc.png" />
+    <Content Include="img\icons\compose.png" />
+    <Content Include="img\icons\computer-keyboard.png" />
+    <Content Include="img\icons\contacts-alt.png" />
+    <Content Include="img\icons\contacts.png" />
+    <Content Include="img\icons\counter.png" />
+    <Content Include="img\icons\cross.png" />
+    <Content Include="img\icons\cross_circle.png" />
+    <Content Include="img\icons\cross_grey_small.png" />
+    <Content Include="img\icons\denied.png" />
+    <Content Include="img\icons\direction_board.png" />
+    <Content Include="img\icons\document.png" />
+    <Content Include="img\icons\door.png" />
+    <Content Include="img\icons\dot_down.gif" />
+    <Content Include="img\icons\dot_down_h.gif" />
+    <Content Include="img\icons\dot_up.gif" />
+    <Content Include="img\icons\dot_up_h.gif" />
+    <Content Include="img\icons\email.png" />
+    <Content Include="img\icons\envelope.png" />
+    <Content Include="img\icons\exclamation.png" />
+    <Content Include="img\icons\floppy.png" />
+    <Content Include="img\icons\folder.png" />
+    <Content Include="img\icons\green_chalkboard.png" />
+    <Content Include="img\icons\hammer_screwdriver.png" />
+    <Content Include="img\icons\hd.png" />
+    <Content Include="img\icons\hd_win.png" />
+    <Content Include="img\icons\help_circle.png" />
+    <Content Include="img\icons\highlighter.png" />
+    <Content Include="img\icons\home.png" />
+    <Content Include="img\icons\id.png" />
+    <Content Include="img\icons\images.png" />
+    <Content Include="img\icons\images_night_scene.png" />
+    <Content Include="img\icons\image_add_48.png" />
+    <Content Include="img\icons\inbox.png" />
+    <Content Include="img\icons\inbox_full.png" />
+    <Content Include="img\icons\information.png" />
+    <Content Include="img\icons\internal_hd.png" />
+    <Content Include="img\icons\jquery.wysiwyg.gif" />
+    <Content Include="img\icons\key.png" />
+    <Content Include="img\icons\library_occupied.png" />
+    <Content Include="img\icons\lock.png" />
+    <Content Include="img\icons\magic_wand.png" />
+    <Content Include="img\icons\mail.png" />
+    <Content Include="img\icons\mail_new.png" />
+    <Content Include="img\icons\mail_open.png" />
+    <Content Include="img\icons\manual.png" />
+    <Content Include="img\icons\maximize_square.png" />
+    <Content Include="img\icons\minimize_square.png" />
+    <Content Include="img\icons\money.png" />
+    <Content Include="img\icons\monitor.png" />
+    <Content Include="img\icons\monitor_off.png" />
+    <Content Include="img\icons\movies.png" />
+    <Content Include="img\icons\mp3_player_black.png" />
+    <Content Include="img\icons\mp3_player_white.png" />
+    <Content Include="img\icons\music.png" />
+    <Content Include="img\icons\Nav_icon_hover_06.png" />
+    <Content Include="img\icons\Nav_icon_hover_18.png" />
+    <Content Include="img\icons\Nav_icon_hover_24.png" />
+    <Content Include="img\icons\Nav_icon_hover_26.png" />
+    <Content Include="img\icons\Nav_JD_hover.png" />
+    <Content Include="img\icons\Nav_jp_hover.png" />
+    <Content Include="img\icons\note-add.png" />
+    <Content Include="img\icons\note-remove.png" />
+    <Content Include="img\icons\note.png" />
+    <Content Include="img\icons\notepad.png" />
+    <Content Include="img\icons\nozip.png" />
+    <Content Include="img\icons\ok.png" />
+    <Content Include="img\icons\paper_content_pencil_48.png" />
+    <Content Include="img\icons\payment.png" />
+    <Content Include="img\icons\pencil.png" />
+    <Content Include="img\icons\pencil_48.png" />
+    <Content Include="img\icons\popcorn_bucket.png" />
+    <Content Include="img\icons\popcorn_full.png" />
+    <Content Include="img\icons\preferences.png" />
+    <Content Include="img\icons\printer.png" />
+    <Content Include="img\icons\rc.png" />
+    <Content Include="img\icons\recycle_bin_empty.png" />
+    <Content Include="img\icons\recycle_bin_full.png" />
+    <Content Include="img\icons\reg_type.gif" />
+    <Content Include="img\icons\removable_drive.png" />
+    <Content Include="img\icons\remove_square.png" />
+    <Content Include="img\icons\RMB_ICON.png" />
+    <Content Include="img\icons\rss.png" />
+    <Content Include="img\icons\ruled_page.png" />
+    <Content Include="img\icons\send.png" />
+    <Content Include="img\icons\shanchu.png" />
+    <Content Include="img\icons\shezhi.png" />
+    <Content Include="img\icons\shortkey.png" />
+    <Content Include="img\icons\sms.gif" />
+    <Content Include="img\icons\soccer_ball.png" />
+    <Content Include="img\icons\sofa.png" />
+    <Content Include="img\icons\spam_mail.png" />
+    <Content Include="img\icons\speaker.png" />
+    <Content Include="img\icons\speaker_mute.png" />
+    <Content Include="img\icons\speaker_volume_control.png" />
+    <Content Include="img\icons\tag.png" />
+    <Content Include="img\icons\text_edit.png" />
+    <Content Include="img\icons\ticket_golden.png" />
+    <Content Include="img\icons\ticket_golden_punched.png" />
+    <Content Include="img\icons\ticket_red.png" />
+    <Content Include="img\icons\ticket_red_punched.png" />
+    <Content Include="img\icons\tick_circle.png" />
+    <Content Include="img\icons\tougao.png" />
+    <Content Include="img\icons\trash_full.png" />
+    <Content Include="img\icons\tree.png" />
+    <Content Include="img\icons\usb.png" />
+    <Content Include="img\icons\user.png" />
+    <Content Include="img\icons\user1.png" />
+    <Content Include="img\icons\videos.png" />
+    <Content Include="img\icons\volume_level_1.png" />
+    <Content Include="img\icons\volume_level_2.png" />
+    <Content Include="img\icons\volume_lvl_3.png" />
+    <Content Include="img\icons\wand.png" />
+    <Content Include="img\icons\white_lego.png" />
+    <Content Include="img\icons\wireless_keyboard.png" />
+    <Content Include="img\icons\xiugai.png" />
+    <Content Include="img\icons\xuexi.gif" />
+    <Content Include="img\icons\yellow_lego.png" />
+    <Content Include="img\icons\yulan.png" />
+    <Content Include="img\icons\zhuangtai1.png" />
+    <Content Include="img\icons\zhuangtai2.png" />
+    <Content Include="img\icons\zip.png" />
+    <Content Include="img\icon_list.png" />
+    <Content Include="img\LanMu.png" />
+    <Content Include="img\Lanmufeilei.png" />
+    <Content Include="img\leftnav-bg-on.gif" />
+    <Content Include="img\leftnav-bg.gif" />
+    <Content Include="img\loginbg.jpg" />
+    <Content Include="img\loginbox.png" />
+    <Content Include="img\seat.gif" />
+    <Content Include="img\star.png" />
+    <Content Include="img\unemailheader.png" />
+    <Content Include="img\Zhutifabiaoxingshi.png" />
+    <Content Include="img\ZhutiXingShi.png" />
+    <Content Include="js\artDialog.js" />
+    <Content Include="js\artDialog.source.js" />
+    <Content Include="js\DateFormat.js" />
+    <Content Include="js\iframeTools.source.js" />
+    <Content Include="js\jquery-1.4.2.min.js" />
+    <Content Include="js\jquery-1.9.1.min.js" />
+    <Content Include="js\jquery-pager-plugin-master\jquery-1.9.1.min.js" />
+    <Content Include="js\jquery-pager-plugin-master\jquery.pager.js" />
+    <Content Include="js\jquery-pager-plugin-master\Pager.css" />
+    <Content Include="js\jquery-pager-plugin-master\PagerDemo.html" />
+    <Content Include="js\main.js" />
+    <Content Include="js\My97DatePicker\calendar.js" />
+    <Content Include="js\My97DatePicker\lang\en.js" />
+    <Content Include="js\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="js\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="js\My97DatePicker\skin\blue\bg.jpg" />
+    <Content Include="js\My97DatePicker\skin\blue\btnbg.jpg" />
+    <Content Include="js\My97DatePicker\skin\blue\datepicker.css" />
+    <Content Include="js\My97DatePicker\skin\blue\down.jpg" />
+    <Content Include="js\My97DatePicker\skin\blue\left.gif" />
+    <Content Include="js\My97DatePicker\skin\blue\navLeft.gif" />
+    <Content Include="js\My97DatePicker\skin\blue\navRight.gif" />
+    <Content Include="js\My97DatePicker\skin\blue\qs.jpg" />
+    <Content Include="js\My97DatePicker\skin\blue\right.gif" />
+    <Content Include="js\My97DatePicker\skin\blue\up.jpg" />
+    <Content Include="js\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="js\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="js\My97DatePicker\skin\default\img.gif" />
+    <Content Include="js\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="js\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="js\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="js\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="js\My97DatePicker\WdatePicker.js" />
+    <Content Include="js\Print_Badge.js" />
+    <Content Include="js\skins\aero.css" />
+    <Content Include="js\skins\aero\aero_s.png" />
+    <Content Include="js\skins\aero\aero_s2.png" />
+    <Content Include="js\skins\aero\ie6\aui_close.hover.png" />
+    <Content Include="js\skins\aero\ie6\aui_close.png" />
+    <Content Include="js\skins\aero\ie6\aui_e.png" />
+    <Content Include="js\skins\aero\ie6\aui_n.png" />
+    <Content Include="js\skins\aero\ie6\aui_ne.png" />
+    <Content Include="js\skins\aero\ie6\aui_nw.png" />
+    <Content Include="js\skins\aero\ie6\aui_s.png" />
+    <Content Include="js\skins\aero\ie6\aui_se.png" />
+    <Content Include="js\skins\aero\ie6\aui_sw.png" />
+    <Content Include="js\skins\aero\ie6\aui_title_icon.png" />
+    <Content Include="js\skins\aero\ie6\aui_w.png" />
+    <Content Include="js\skins\black.css" />
+    <Content Include="js\skins\black\bg.png" />
+    <Content Include="js\skins\black\bg2.png" />
+    <Content Include="js\skins\black\bg_css3.png" />
+    <Content Include="js\skins\black\bg_css3_2.png" />
+    <Content Include="js\skins\black\ie6\close.hover.png" />
+    <Content Include="js\skins\black\ie6\close.png" />
+    <Content Include="js\skins\black\ie6\e.png" />
+    <Content Include="js\skins\black\ie6\n.png" />
+    <Content Include="js\skins\black\ie6\ne.png" />
+    <Content Include="js\skins\black\ie6\nw.png" />
+    <Content Include="js\skins\black\ie6\s.png" />
+    <Content Include="js\skins\black\ie6\se.png" />
+    <Content Include="js\skins\black\ie6\sw.png" />
+    <Content Include="js\skins\black\ie6\w.png" />
+    <Content Include="js\skins\blue.css" />
+    <Content Include="js\skins\blue\bg.png" />
+    <Content Include="js\skins\blue\bg2.png" />
+    <Content Include="js\skins\blue\bg_css3.png" />
+    <Content Include="js\skins\blue\bg_css3_2.png" />
+    <Content Include="js\skins\blue\ie6\close.hover.png" />
+    <Content Include="js\skins\blue\ie6\close.png" />
+    <Content Include="js\skins\blue\ie6\e.png" />
+    <Content Include="js\skins\blue\ie6\n.png" />
+    <Content Include="js\skins\blue\ie6\ne.png" />
+    <Content Include="js\skins\blue\ie6\nw.png" />
+    <Content Include="js\skins\blue\ie6\s.png" />
+    <Content Include="js\skins\blue\ie6\se.png" />
+    <Content Include="js\skins\blue\ie6\sw.png" />
+    <Content Include="js\skins\blue\ie6\w.png" />
+    <Content Include="js\skins\chrome.css" />
+    <Content Include="js\skins\chrome\border.png" />
+    <Content Include="js\skins\chrome\chrome_s.png" />
+    <Content Include="js\skins\default.css" />
+    <Content Include="js\skins\green.css" />
+    <Content Include="js\skins\green\bg.png" />
+    <Content Include="js\skins\green\bg2.png" />
+    <Content Include="js\skins\green\bg_css3.png" />
+    <Content Include="js\skins\green\bg_css3_2.png" />
+    <Content Include="js\skins\green\color_bg.png" />
+    <Content Include="js\skins\green\ie6\close.hover.png" />
+    <Content Include="js\skins\green\ie6\close.png" />
+    <Content Include="js\skins\green\ie6\e.png" />
+    <Content Include="js\skins\green\ie6\n.png" />
+    <Content Include="js\skins\green\ie6\ne.png" />
+    <Content Include="js\skins\green\ie6\nw.png" />
+    <Content Include="js\skins\green\ie6\s.png" />
+    <Content Include="js\skins\green\ie6\se.png" />
+    <Content Include="js\skins\green\ie6\sw.png" />
+    <Content Include="js\skins\green\ie6\w.png" />
+    <Content Include="js\skins\icons\error.png" />
+    <Content Include="js\skins\icons\face-sad.png" />
+    <Content Include="js\skins\icons\face-smile.png" />
+    <Content Include="js\skins\icons\loading.gif" />
+    <Content Include="js\skins\icons\question.png" />
+    <Content Include="js\skins\icons\succeed.png" />
+    <Content Include="js\skins\icons\warning.png" />
+    <Content Include="js\skins\idialog.css" />
+    <Content Include="js\skins\idialog\idialog_s.png" />
+    <Content Include="js\skins\idialog\idialog_s2.png" />
+    <Content Include="js\skins\idialog\ie6\aui_close.hover.png" />
+    <Content Include="js\skins\idialog\ie6\aui_close.png" />
+    <Content Include="js\skins\idialog\ie6\aui_e.png" />
+    <Content Include="js\skins\idialog\ie6\aui_n.png" />
+    <Content Include="js\skins\idialog\ie6\aui_ne.png" />
+    <Content Include="js\skins\idialog\ie6\aui_nw.png" />
+    <Content Include="js\skins\idialog\ie6\aui_s.png" />
+    <Content Include="js\skins\idialog\ie6\aui_se.png" />
+    <Content Include="js\skins\idialog\ie6\aui_sw.png" />
+    <Content Include="js\skins\idialog\ie6\aui_w.png" />
+    <Content Include="js\skins\opera.css" />
+    <Content Include="js\skins\opera\ie6\aui_close.hover.png" />
+    <Content Include="js\skins\opera\ie6\aui_close.png" />
+    <Content Include="js\skins\opera\ie6\aui_e.png" />
+    <Content Include="js\skins\opera\ie6\aui_n.png" />
+    <Content Include="js\skins\opera\ie6\aui_ne.png" />
+    <Content Include="js\skins\opera\ie6\aui_nw.png" />
+    <Content Include="js\skins\opera\ie6\aui_s.png" />
+    <Content Include="js\skins\opera\ie6\aui_se.png" />
+    <Content Include="js\skins\opera\ie6\aui_sw.png" />
+    <Content Include="js\skins\opera\ie6\aui_w.png" />
+    <Content Include="js\skins\opera\s1.png" />
+    <Content Include="js\skins\opera\s2.png" />
+    <Content Include="js\skins\simple.css" />
+    <Content Include="js\skins\twitter.css" />
+    <Content Include="js\techmaxJS.js" />
+    <Content Include="js\uploadifive\jquery.min.js" />
+    <Content Include="js\uploadifive\jquery.uploadifive.min.js" />
+    <Content Include="js\uploadifive\uploadifive-cancel.png" />
+    <Content Include="js\uploadifive\uploadifive.css" />
+    <Content Include="js\uploadify\cls.png" />
+    <Content Include="js\uploadify\document.png" />
+    <Content Include="js\uploadify\expressInstall.swf" />
+    <Content Include="js\uploadify\ICOn.png" />
+    <Content Include="js\uploadify\jquery-1.3.2.min.js" />
+    <Content Include="js\uploadify\jquery.uploadify.v2.1.0.js" />
+    <Content Include="js\uploadify\photo.png" />
+    <Content Include="js\uploadify\PPT_upload_06.png" />
+    <Content Include="js\uploadify\swfobject.js" />
+    <Content Include="js\uploadify\upload.gif" />
+    <Content Include="js\uploadify\upload.png" />
+    <Content Include="js\uploadify\uploadify.allglyphs.swf" />
+    <Content Include="js\uploadify\uploadify.css" />
+    <Content Include="js\uploadify\uploadify.swf" />
+    <Content Include="js\uploadify\uploadtemp.gif" />
+    <Content Include="js\uploadify\uploadtemp.png" />
+    <Content Include="js\uploadify\Up_03.jpg" />
+    <Content Include="js\uploadify\Up_file.jpg" />
+    <Content Include="kindeditor\asp.net\bin\LitJSON.dll" />
+    <Content Include="kindeditor\asp.net\demo.aspx" />
+    <Content Include="kindeditor\asp.net\README.txt" />
+    <Content Include="kindeditor\kindeditor-all-min.js" />
+    <Content Include="kindeditor\kindeditor-all.js" />
+    <Content Include="kindeditor\kindeditor-min.js" />
+    <Content Include="kindeditor\kindeditor.js" />
+    <Content Include="kindeditor\lang\ar.js" />
+    <Content Include="kindeditor\lang\en.js" />
+    <Content Include="kindeditor\lang\ko.js" />
+    <Content Include="kindeditor\lang\zh_CN.js" />
+    <Content Include="kindeditor\lang\zh_TW.js" />
+    <Content Include="kindeditor\plugins\anchor\anchor.js" />
+    <Content Include="kindeditor\plugins\autoheight\autoheight.js" />
+    <Content Include="kindeditor\plugins\baidumap\baidumap.js" />
+    <Content Include="kindeditor\plugins\baidumap\index.html" />
+    <Content Include="kindeditor\plugins\baidumap\map.html" />
+    <Content Include="kindeditor\plugins\clearhtml\clearhtml.js" />
+    <Content Include="kindeditor\plugins\code\code.js" />
+    <Content Include="kindeditor\plugins\code\prettify.css" />
+    <Content Include="kindeditor\plugins\code\prettify.js" />
+    <Content Include="kindeditor\plugins\emoticons\emoticons.js" />
+    <Content Include="kindeditor\plugins\emoticons\images\0.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\1.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\10.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\100.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\101.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\102.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\103.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\104.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\105.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\106.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\107.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\108.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\109.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\11.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\110.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\111.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\112.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\113.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\114.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\115.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\116.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\117.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\118.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\119.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\12.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\120.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\121.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\122.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\123.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\124.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\125.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\126.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\127.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\128.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\129.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\13.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\130.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\131.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\132.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\133.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\134.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\14.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\15.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\16.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\17.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\18.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\19.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\2.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\20.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\21.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\22.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\23.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\24.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\25.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\26.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\27.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\28.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\29.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\3.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\30.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\31.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\32.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\33.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\34.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\35.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\36.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\37.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\38.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\39.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\4.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\40.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\41.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\42.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\43.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\44.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\45.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\46.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\47.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\48.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\49.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\5.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\50.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\51.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\52.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\53.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\54.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\55.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\56.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\57.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\58.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\59.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\6.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\60.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\61.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\62.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\63.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\64.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\65.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\66.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\67.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\68.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\69.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\7.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\70.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\71.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\72.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\73.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\74.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\75.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\76.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\77.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\78.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\79.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\8.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\80.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\81.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\82.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\83.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\84.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\85.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\86.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\87.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\88.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\89.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\9.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\90.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\91.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\92.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\93.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\94.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\95.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\96.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\97.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\98.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\99.gif" />
+    <Content Include="kindeditor\plugins\emoticons\images\static.gif" />
+    <Content Include="kindeditor\plugins\filemanager\filemanager.js" />
+    <Content Include="kindeditor\plugins\filemanager\images\file-16.gif" />
+    <Content Include="kindeditor\plugins\filemanager\images\file-64.gif" />
+    <Content Include="kindeditor\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="kindeditor\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="kindeditor\plugins\filemanager\images\go-up.gif" />
+    <Content Include="kindeditor\plugins\flash\flash.js" />
+    <Content Include="kindeditor\plugins\image\image.js" />
+    <Content Include="kindeditor\plugins\image\images\align_left.gif" />
+    <Content Include="kindeditor\plugins\image\images\align_right.gif" />
+    <Content Include="kindeditor\plugins\image\images\align_top.gif" />
+    <Content Include="kindeditor\plugins\image\images\refresh.png" />
+    <Content Include="kindeditor\plugins\insertfile\insertfile.js" />
+    <Content Include="kindeditor\plugins\lineheight\lineheight.js" />
+    <Content Include="kindeditor\plugins\link\link.js" />
+    <Content Include="kindeditor\plugins\map\map.html" />
+    <Content Include="kindeditor\plugins\map\map.js" />
+    <Content Include="kindeditor\plugins\media\media.js" />
+    <Content Include="kindeditor\plugins\multiimage\images\image.png" />
+    <Content Include="kindeditor\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="kindeditor\plugins\multiimage\images\select-files-zh_CN.png" />
+    <Content Include="kindeditor\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="kindeditor\plugins\multiimage\multiimage.js" />
+    <Content Include="kindeditor\plugins\pagebreak\pagebreak.js" />
+    <Content Include="kindeditor\plugins\plainpaste\plainpaste.js" />
+    <Content Include="kindeditor\plugins\preview\preview.js" />
+    <Content Include="kindeditor\plugins\quickformat\quickformat.js" />
+    <Content Include="kindeditor\plugins\table\table.js" />
+    <Content Include="kindeditor\plugins\template\html\1.html" />
+    <Content Include="kindeditor\plugins\template\html\2.html" />
+    <Content Include="kindeditor\plugins\template\html\3.html" />
+    <Content Include="kindeditor\plugins\template\template.js" />
+    <Content Include="kindeditor\plugins\wordpaste\wordpaste.js" />
+    <Content Include="kindeditor\themes\common\anchor.gif" />
+    <Content Include="kindeditor\themes\common\blank.gif" />
+    <Content Include="kindeditor\themes\common\flash.gif" />
+    <Content Include="kindeditor\themes\common\loading.gif" />
+    <Content Include="kindeditor\themes\common\media.gif" />
+    <Content Include="kindeditor\themes\common\rm.gif" />
+    <Content Include="kindeditor\themes\default\background.png" />
+    <Content Include="kindeditor\themes\default\default.css" />
+    <Content Include="kindeditor\themes\default\default.png" />
+    <Content Include="kindeditor\themes\qq\editor.gif" />
+    <Content Include="kindeditor\themes\qq\qq.css" />
+    <Content Include="kindeditor\themes\simple\simple.css" />
+    <Content Include="test.aspx" />
+    <Content Include="Upload\image\20170406\20170406163210_4819.jpg" />
+    <Content Include="Upload\image\20170406\20170406163224_6497.jpg" />
+    <Content Include="Upload\image\20170406\20170406163454_7913.jpg" />
+    <Content Include="Upload\image\20170406\20170406163454_8373.jpg" />
+    <Content Include="Upload\image\20170406\20170406164037_4499.jpg" />
+    <Content Include="Upload\image\20170406\20170406164222_2389.jpg" />
+    <Content Include="Upload\image\20170406\20170406164504_4721.jpg" />
+    <Content Include="AjaxResponse\tech_mobile_typeHandler.ashx" />
+    <Content Include="AjaxResponse\tech_mobile_templateHandler.ashx" />
+    <Content Include="AjaxResponse\UploadFileHandler.ashx" />
+    <Content Include="AjaxResponse\tech_mobile_type_menuHandler.ashx" />
+    <Content Include="AjaxResponse\tech_mobile_versionHandler.ashx" />
+    <Content Include="AjaxResponse\tech_mobile_template_menuHandler.ashx" />
+    <Content Include="AjaxResponse\tech_project_managerHandler.ashx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\TechMaxSms\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\TechMaxSms\SMSWebService.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminLog\AdminLog.Master.cs">
+      <DependentUpon>AdminLog.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLog\AdminLog.Master.designer.cs">
+      <DependentUpon>AdminLog.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLog\editPasswd.aspx.cs">
+      <DependentUpon>editPasswd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLog\editPasswd.aspx.designer.cs">
+      <DependentUpon>editPasswd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLog\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLog\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLog\left.aspx.cs">
+      <DependentUpon>left.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLog\left.aspx.designer.cs">
+      <DependentUpon>left.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLog\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLog\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLog\loginOut.aspx.cs">
+      <DependentUpon>loginOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLog\loginOut.aspx.designer.cs">
+      <DependentUpon>loginOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLog\show.aspx.cs">
+      <DependentUpon>show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLog\show.aspx.designer.cs">
+      <DependentUpon>show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLog\tech_log_list.aspx.cs">
+      <DependentUpon>tech_log_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLog\tech_log_list.aspx.designer.cs">
+      <DependentUpon>tech_log_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLog\tech_log_list_all.aspx.cs">
+      <DependentUpon>tech_log_list_all.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLog\tech_log_list_all.aspx.designer.cs">
+      <DependentUpon>tech_log_list_all.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLog\top.aspx.cs">
+      <DependentUpon>top.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLog\top.aspx.designer.cs">
+      <DependentUpon>top.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminPage\admin_add.aspx.cs">
+      <DependentUpon>admin_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminPage\admin_add.aspx.designer.cs">
+      <DependentUpon>admin_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminPage\admin_edit.aspx.cs">
+      <DependentUpon>admin_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminPage\admin_edit.aspx.designer.cs">
+      <DependentUpon>admin_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminPage\admin_list.aspx.cs">
+      <DependentUpon>admin_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminPage\admin_list.aspx.designer.cs">
+      <DependentUpon>admin_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminPage\editPasswd.aspx.cs">
+      <DependentUpon>editPasswd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminPage\editPasswd.aspx.designer.cs">
+      <DependentUpon>editPasswd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\batchAccountCheckPage\batchAccountCheck.aspx.cs">
+      <DependentUpon>batchAccountCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\batchAccountCheckPage\batchAccountCheck.aspx.designer.cs">
+      <DependentUpon>batchAccountCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\checkMobile.aspx.cs">
+      <DependentUpon>checkMobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\checkMobile.aspx.designer.cs">
+      <DependentUpon>checkMobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EmailTemplatePage\email_template_add.aspx.cs">
+      <DependentUpon>email_template_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EmailTemplatePage\email_template_add.aspx.designer.cs">
+      <DependentUpon>email_template_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EmailTemplatePage\email_template_edit.aspx.cs">
+      <DependentUpon>email_template_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EmailTemplatePage\email_template_edit.aspx.designer.cs">
+      <DependentUpon>email_template_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EmailTemplatePage\email_template_list.aspx.cs">
+      <DependentUpon>email_template_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EmailTemplatePage\email_template_list.aspx.designer.cs">
+      <DependentUpon>email_template_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ForbiddenWord\WordAdd.aspx.cs">
+      <DependentUpon>WordAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ForbiddenWord\WordAdd.aspx.designer.cs">
+      <DependentUpon>WordAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ForbiddenWord\WordEdit.aspx.cs">
+      <DependentUpon>WordEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ForbiddenWord\WordEdit.aspx.designer.cs">
+      <DependentUpon>WordEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ForbiddenWord\WordList.aspx.cs">
+      <DependentUpon>WordList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ForbiddenWord\WordList.aspx.designer.cs">
+      <DependentUpon>WordList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HtmlTemplatePage\tech_html_template_add.aspx.cs">
+      <DependentUpon>tech_html_template_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HtmlTemplatePage\tech_html_template_add.aspx.designer.cs">
+      <DependentUpon>tech_html_template_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HtmlTemplatePage\tech_html_template_list.aspx.cs">
+      <DependentUpon>tech_html_template_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HtmlTemplatePage\tech_html_template_list.aspx.designer.cs">
+      <DependentUpon>tech_html_template_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HtmlTemplatePage\tech_html_template_edit.aspx.cs">
+      <DependentUpon>tech_html_template_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HtmlTemplatePage\tech_html_template_edit.aspx.designer.cs">
+      <DependentUpon>tech_html_template_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HtmlTemplatePage\tech_html_template_list_add.aspx.cs">
+      <DependentUpon>tech_html_template_list_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HtmlTemplatePage\tech_html_template_list_add.aspx.designer.cs">
+      <DependentUpon>tech_html_template_list_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HtmlTemplatePage\tech_html_template_list_edit.aspx.cs">
+      <DependentUpon>tech_html_template_list_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HtmlTemplatePage\tech_html_template_list_edit.aspx.designer.cs">
+      <DependentUpon>tech_html_template_list_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HtmlTemplatePage\tech_html_template_list_list.aspx.cs">
+      <DependentUpon>tech_html_template_list_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HtmlTemplatePage\tech_html_template_list_list.aspx.designer.cs">
+      <DependentUpon>tech_html_template_list_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\left.aspx.cs">
+      <DependentUpon>left.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\left.aspx.designer.cs">
+      <DependentUpon>left.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\loginOut.aspx.cs">
+      <DependentUpon>loginOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\loginOut.aspx.designer.cs">
+      <DependentUpon>loginOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MeetingPage\tech_meeting_add.aspx.cs">
+      <DependentUpon>tech_meeting_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MeetingPage\tech_meeting_add.aspx.designer.cs">
+      <DependentUpon>tech_meeting_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MeetingPage\tech_meeting_edit.aspx.cs">
+      <DependentUpon>tech_meeting_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MeetingPage\tech_meeting_edit.aspx.designer.cs">
+      <DependentUpon>tech_meeting_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MeetingPage\tech_meeting_list.aspx.cs">
+      <DependentUpon>tech_meeting_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MeetingPage\tech_meeting_list.aspx.designer.cs">
+      <DependentUpon>tech_meeting_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MeetingPage\tech_meeting_type_add.aspx.cs">
+      <DependentUpon>tech_meeting_type_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MeetingPage\tech_meeting_type_add.aspx.designer.cs">
+      <DependentUpon>tech_meeting_type_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MeetingPage\tech_meeting_type_edit.aspx.cs">
+      <DependentUpon>tech_meeting_type_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MeetingPage\tech_meeting_type_edit.aspx.designer.cs">
+      <DependentUpon>tech_meeting_type_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MeetingPage\tech_meeting_type_list.aspx.cs">
+      <DependentUpon>tech_meeting_type_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MeetingPage\tech_meeting_type_list.aspx.designer.cs">
+      <DependentUpon>tech_meeting_type_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MessagePage\add_msg.aspx.cs">
+      <DependentUpon>add_msg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MessagePage\add_msg.aspx.designer.cs">
+      <DependentUpon>add_msg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MessagePage\edit_msg.aspx.cs">
+      <DependentUpon>edit_msg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MessagePage\edit_msg.aspx.designer.cs">
+      <DependentUpon>edit_msg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MessagePage\msg_list.aspx.cs">
+      <DependentUpon>msg_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MessagePage\msg_list.aspx.designer.cs">
+      <DependentUpon>msg_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mobile_type_menuEdit.aspx.cs">
+      <DependentUpon>mobile_type_menuEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mobile_type_menuEdit.aspx.designer.cs">
+      <DependentUpon>mobile_type_menuEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mtemplate_add.aspx.cs">
+      <DependentUpon>mtemplate_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mtemplate_add.aspx.designer.cs">
+      <DependentUpon>mtemplate_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mtemplate_edit.aspx.cs">
+      <DependentUpon>mtemplate_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mtemplate_edit.aspx.designer.cs">
+      <DependentUpon>mtemplate_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mtemplate_list.aspx.cs">
+      <DependentUpon>mtemplate_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mtemplate_list.aspx.designer.cs">
+      <DependentUpon>mtemplate_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mtemplate_type_add.aspx.cs">
+      <DependentUpon>mtemplate_type_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mtemplate_type_add.aspx.designer.cs">
+      <DependentUpon>mtemplate_type_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mtemplate_type_edit.aspx.cs">
+      <DependentUpon>mtemplate_type_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mtemplate_type_edit.aspx.designer.cs">
+      <DependentUpon>mtemplate_type_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mtemplate_type_list.aspx.cs">
+      <DependentUpon>mtemplate_type_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mtemplate_type_list.aspx.designer.cs">
+      <DependentUpon>mtemplate_type_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mtemplate_version_add.aspx.cs">
+      <DependentUpon>mtemplate_version_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mtemplate_version_add.aspx.designer.cs">
+      <DependentUpon>mtemplate_version_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mtemplate_version_edit.aspx.cs">
+      <DependentUpon>mtemplate_version_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mtemplate_version_edit.aspx.designer.cs">
+      <DependentUpon>mtemplate_version_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mtemplate_version_list.aspx.cs">
+      <DependentUpon>mtemplate_version_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mtemplate_version_list.aspx.designer.cs">
+      <DependentUpon>mtemplate_version_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mt_open_css.aspx.cs">
+      <DependentUpon>mt_open_css.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mt_open_css.aspx.designer.cs">
+      <DependentUpon>mt_open_css.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mt_open_thumbnail.aspx.cs">
+      <DependentUpon>mt_open_thumbnail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MobilePage\mt_open_thumbnail.aspx.designer.cs">
+      <DependentUpon>mt_open_thumbnail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MobilePage\project_manager.aspx.cs">
+      <DependentUpon>project_manager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MobilePage\project_manager.aspx.designer.cs">
+      <DependentUpon>project_manager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MobilePage\project_manager_add.aspx.cs">
+      <DependentUpon>project_manager_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MobilePage\project_manager_add.aspx.designer.cs">
+      <DependentUpon>project_manager_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MobilePage\project_manager_edit.aspx.cs">
+      <DependentUpon>project_manager_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MobilePage\project_manager_edit.aspx.designer.cs">
+      <DependentUpon>project_manager_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MobilePage\template_menuEdit.aspx.cs">
+      <DependentUpon>template_menuEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\MobilePage\template_menuEdit.aspx.designer.cs">
+      <DependentUpon>template_menuEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OtherPage\article_type_add.aspx.cs">
+      <DependentUpon>article_type_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OtherPage\article_type_add.aspx.designer.cs">
+      <DependentUpon>article_type_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OtherPage\article_type_edit.aspx.cs">
+      <DependentUpon>article_type_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OtherPage\article_type_edit.aspx.designer.cs">
+      <DependentUpon>article_type_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OtherPage\article_type_list.aspx.cs">
+      <DependentUpon>article_type_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OtherPage\article_type_list.aspx.designer.cs">
+      <DependentUpon>article_type_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OtherPage\meeting_reg_type_add.aspx.cs">
+      <DependentUpon>meeting_reg_type_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OtherPage\meeting_reg_type_add.aspx.designer.cs">
+      <DependentUpon>meeting_reg_type_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OtherPage\meeting_reg_type_edit.aspx.cs">
+      <DependentUpon>meeting_reg_type_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OtherPage\meeting_reg_type_edit.aspx.designer.cs">
+      <DependentUpon>meeting_reg_type_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OtherPage\meeting_reg_type_list.aspx.cs">
+      <DependentUpon>meeting_reg_type_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OtherPage\meeting_reg_type_list.aspx.designer.cs">
+      <DependentUpon>meeting_reg_type_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OtherPage\published_form_add.aspx.cs">
+      <DependentUpon>published_form_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OtherPage\published_form_add.aspx.designer.cs">
+      <DependentUpon>published_form_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OtherPage\published_form_edit.aspx.cs">
+      <DependentUpon>published_form_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OtherPage\published_form_edit.aspx.designer.cs">
+      <DependentUpon>published_form_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\OtherPage\published_form_list.aspx.cs">
+      <DependentUpon>published_form_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\OtherPage\published_form_list.aspx.designer.cs">
+      <DependentUpon>published_form_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PrintPage\PersonAdd.aspx.cs">
+      <DependentUpon>PersonAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PrintPage\PersonAdd.aspx.designer.cs">
+      <DependentUpon>PersonAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PrintPage\PersonEdit.aspx.cs">
+      <DependentUpon>PersonEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PrintPage\PersonEdit.aspx.designer.cs">
+      <DependentUpon>PersonEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PrintPage\PersonList.aspx.cs">
+      <DependentUpon>PersonList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PrintPage\PersonList.aspx.designer.cs">
+      <DependentUpon>PersonList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SendMsgPage\SendedMsgList.aspx.cs">
+      <DependentUpon>SendedMsgList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SendMsgPage\SendedMsgList.aspx.designer.cs">
+      <DependentUpon>SendedMsgList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SendMsgPage\SendMsg.aspx.cs">
+      <DependentUpon>SendMsg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SendMsgPage\SendMsg.aspx.designer.cs">
+      <DependentUpon>SendMsg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\show.aspx.cs">
+      <DependentUpon>show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\show.aspx.designer.cs">
+      <DependentUpon>show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TechUserAllPage\meeting_order_list.aspx.cs">
+      <DependentUpon>meeting_order_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TechUserAllPage\meeting_order_list.aspx.designer.cs">
+      <DependentUpon>meeting_order_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TechUserAllPage\tech_user_all_list.aspx.cs">
+      <DependentUpon>tech_user_all_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TechUserAllPage\tech_user_all_list.aspx.designer.cs">
+      <DependentUpon>tech_user_all_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\top.aspx.cs">
+      <DependentUpon>top.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\top.aspx.designer.cs">
+      <DependentUpon>top.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\PrintPersonHandler.ashx.cs">
+      <DependentUpon>PrintPersonHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_batchHandler.ashx.cs">
+      <DependentUpon>tech_batchHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\email_templateHandler.ashx.cs">
+      <DependentUpon>email_templateHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\PageBaseHandler.ashx.cs">
+      <DependentUpon>PageBaseHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_adminHandler.ashx.cs">
+      <DependentUpon>tech_adminHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_article_typeHandler.ashx.cs">
+      <DependentUpon>tech_article_typeHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_forbidden_wordHandler.ashx.cs">
+      <DependentUpon>tech_forbidden_wordHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_html_templateHandler.ashx.cs">
+      <DependentUpon>tech_html_templateHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_html_template_listHandler.ashx.cs">
+      <DependentUpon>tech_html_template_listHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_meetingHandler.ashx.cs">
+      <DependentUpon>tech_meetingHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_meeting_reg_typeHandler.ashx.cs">
+      <DependentUpon>tech_meeting_reg_typeHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_meeting_typeHandler.ashx.cs">
+      <DependentUpon>tech_meeting_typeHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_messageHandler.ashx.cs">
+      <DependentUpon>tech_messageHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_mobile_templateHandler.ashx.cs">
+      <DependentUpon>tech_mobile_templateHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_mobile_template_menuHandler.ashx.cs">
+      <DependentUpon>tech_mobile_template_menuHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_mobile_typeHandler.ashx.cs">
+      <DependentUpon>tech_mobile_typeHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_mobile_type_menuHandler.ashx.cs">
+      <DependentUpon>tech_mobile_type_menuHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_mobile_versionHandler.ashx.cs">
+      <DependentUpon>tech_mobile_versionHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_operating_recordHandler.ashx.cs">
+      <DependentUpon>tech_operating_recordHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_project_managerHandler.ashx.cs">
+      <DependentUpon>tech_project_managerHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_published_formHandler.ashx.cs">
+      <DependentUpon>tech_published_formHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_send_wx_messageHandler.ashx.cs">
+      <DependentUpon>tech_send_wx_messageHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\tech_user_allHandler.ashx.cs">
+      <DependentUpon>tech_user_allHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\testHandler.ashx.cs">
+      <DependentUpon>testHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\unsubscribeEmail.ashx.cs">
+      <DependentUpon>unsubscribeEmail.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\UploadFileHandler.ashx.cs">
+      <DependentUpon>UploadFileHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxResponse\WeiXinAPI.ashx.cs">
+      <DependentUpon>WeiXinAPI.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPage\PageBaseClass.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\VeCode.aspx.cs">
+      <DependentUpon>VeCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CommonPage\VeCode.aspx.designer.cs">
+      <DependentUpon>VeCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="crm\unsubscribeEmail.aspx.cs">
+      <DependentUpon>unsubscribeEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="crm\unsubscribeEmail.aspx.designer.cs">
+      <DependentUpon>unsubscribeEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\TechMaxSms\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Xenon\assets\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\css\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\css\fonts\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\css\fonts\elusive\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\css\fonts\elusive\font\elusive.eot" />
+    <Content Include="Admin\Xenon\assets\css\fonts\elusive\font\elusive.ttf" />
+    <Content Include="Admin\Xenon\assets\css\fonts\elusive\font\elusive.woff" />
+    <Content Include="Admin\Xenon\assets\css\fonts\fontawesome\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\css\fonts\fontawesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Admin\Xenon\assets\css\fonts\fontawesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Admin\Xenon\assets\css\fonts\fontawesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Admin\Xenon\assets\css\fonts\fontawesome\fonts\FontAwesome.otf" />
+    <Content Include="Admin\Xenon\assets\css\fonts\glyphicons\glyphicons-halflings-regular.eot" />
+    <Content Include="Admin\Xenon\assets\css\fonts\glyphicons\glyphicons-halflings-regular.ttf" />
+    <Content Include="Admin\Xenon\assets\css\fonts\glyphicons\glyphicons-halflings-regular.woff" />
+    <Content Include="Admin\Xenon\assets\css\fonts\linecons\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\css\fonts\linecons\font\linecons.eot" />
+    <Content Include="Admin\Xenon\assets\css\fonts\linecons\font\linecons.ttf" />
+    <Content Include="Admin\Xenon\assets\css\fonts\linecons\font\linecons.woff" />
+    <Content Include="Admin\Xenon\assets\css\fonts\meteocons\font\meteocons.eot" />
+    <Content Include="Admin\Xenon\assets\css\fonts\meteocons\font\meteocons.ttf" />
+    <Content Include="Admin\Xenon\assets\css\fonts\meteocons\font\meteocons.woff" />
+    <Content Include="Admin\Xenon\assets\images\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\images\news-image-widget-3" />
+    <Content Include="Admin\Xenon\assets\js\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\CHANGES.md" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\LICENSE.md" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\scayt\README.md" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\plugins\wsc\README.md" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\README.md" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\assets\posteddata.php" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.fla" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\samples\sample_posteddata.php" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\dev\locations.json" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\readme.md" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\browser-specific\gecko\editor_gecko.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\browser-specific\ie7\dialog_ie7.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\browser-specific\ie7\editor_ie7.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\browser-specific\ie8\dialog_ie8.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\browser-specific\ie8\editor_ie8.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\browser-specific\iequirks\dialog_iequirks.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\browser-specific\iequirks\editor_iequirks.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\browser-specific\ie\dialog_ie.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\browser-specific\ie\editor_ie.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\browser-specific\opera\dialog_opera.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\components\editor.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\components\_colorpanel.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\components\_elementspath.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\components\_mainui.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\components\_menu.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\components\_panel.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\components\_presets.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\components\_reset.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\components\_richcombo.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\components\_toolbar.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\config\_colors.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\config\_config.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\config\_defaults.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\bootstrapck\scss\dialog\dialog.scss" />
+    <Content Include="Admin\Xenon\assets\js\ckeditor\skins\moono\readme.md" />
+    <Content Include="Admin\Xenon\assets\js\colorpicker\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\datatables\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\datatables\images\Sorting icons.psd" />
+    <Content Include="Admin\Xenon\assets\js\daterangepicker\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\daterangepicker\.gitignore" />
+    <Content Include="Admin\Xenon\assets\js\devexpress-web-14.1\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\dropzone\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\dropzone\css\stylus\basic.styl" />
+    <Content Include="Admin\Xenon\assets\js\dropzone\css\stylus\dropzone.styl" />
+    <Content Include="Admin\Xenon\assets\js\icheck\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\inputmask\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\jquery-ui\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\jquery-validate\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\jvectormap\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\multiselect\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\multiselect\img\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\rwd-table\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\select2\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\select2\.gitignore" />
+    <Content Include="Admin\Xenon\assets\js\select2\LICENSE" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2.jquery.json" />
+    <Content Include="Admin\Xenon\assets\js\select2\select2_locale_en.js.template" />
+    <Content Include="Admin\Xenon\assets\js\selectboxit\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\tagsinput\bootstrap-tagsinput.less" />
+    <Content Include="Admin\Xenon\assets\js\tagsinput\bootstrap-tagsinput.min.js.map" />
+    <Content Include="Admin\Xenon\assets\js\toastr\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\toastr\toastr.less" />
+    <Content Include="Admin\Xenon\assets\js\toastr\toastr.min.js.map" />
+    <Content Include="Admin\Xenon\assets\js\toastr\toastr.scss" />
+    <Content Include="Admin\Xenon\assets\js\tocify\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\uikit\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\uikit\fonts\fontawesome-webfont.eot" />
+    <Content Include="Admin\Xenon\assets\js\uikit\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Admin\Xenon\assets\js\uikit\fonts\fontawesome-webfont.woff" />
+    <Content Include="Admin\Xenon\assets\js\uikit\fonts\FontAwesome.otf" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\addons\autocomplete.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\addons\cover.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\addons\datepicker.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\addons\dotnav.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\addons\flex.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\addons\form-advanced.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\addons\form-file.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\addons\form-password.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\addons\form-select.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\addons\htmleditor.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\addons\nestable.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\addons\notify.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\addons\placeholder.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\addons\search.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\addons\slidenav.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\addons\sortable.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\addons\sticky.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\addons\upload.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\alert.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\animation.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\article.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\badge.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\base.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\breadcrumb.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\button.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\close.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\comment.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\description-list.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\dropdown.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\form.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\grid.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\icon.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\list.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\modal.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\nav.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\navbar.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\offcanvas.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\overlay.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\pagination.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\panel.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\print.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\progress.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\subnav.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\switcher.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\tab.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\table.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\text.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\thumbnail.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\tooltip.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\uikit-addons.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\uikit.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\utility.less" />
+    <Content Include="Admin\Xenon\assets\js\uikit\less\variables.less" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\js\wysihtml5\lib\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\less\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\less\bootstrap.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\alerts.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\badges.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\breadcrumbs.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\button-groups.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\buttons.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\carousel.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\close.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\code.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\component-animations.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\dropdowns.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\forms.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\glyphicons.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\grid.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\input-groups.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\jumbotron.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\labels.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\list-group.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\media.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\alerts.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\background-variant.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\border-radius.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\buttons.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\center-block.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\clearfix.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\forms.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\gradients.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\grid-framework.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\grid.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\hide-text.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\image.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\labels.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\list-group.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\nav-divider.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\nav-vertical-align.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\opacity.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\pagination.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\panels.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\progress-bar.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\reset-filter.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\resize.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\responsive-visibility.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\size.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\tab-focus.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\table-row.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\text-emphasis.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\text-overflow.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\mixins\vendor-prefixes.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\modals.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\navbar.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\navs.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\normalize.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\pager.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\pagination.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\panels.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\popovers.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\print.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\progress-bars.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\responsive-embed.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\responsive-utilities.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\scaffolding.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\tables.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\theme.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\thumbnails.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\tooltip.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\type.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\utilities.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\variables.less" />
+    <Content Include="Admin\Xenon\assets\less\bs-less\wells.less" />
+    <Content Include="Admin\Xenon\assets\less\global-classes.less" />
+    <Content Include="Admin\Xenon\assets\less\other-less\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\less\other-less\cbp-timeline.less" />
+    <Content Include="Admin\Xenon\assets\less\other-less\lesshat.less" />
+    <Content Include="Admin\Xenon\assets\less\other-less\perfect-scrollbar.less" />
+    <Content Include="Admin\Xenon\assets\less\other-less\rwd-table.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-components.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-core.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-forms.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\.DS_Store" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\badges.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\blockquotes.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\bootstrap-overwrite.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\breadcrumbs.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\buttons.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\calendar.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\chat.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\checkbox-radio-replacement.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\dropdowns.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\footer.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\forms-colorpicker.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\forms-datepicker.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\forms-daterangepicker.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\forms-dropzone.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\forms-icheck.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\forms-iswitch.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\forms-multiselect.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\forms-select2.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\forms-selectboxit.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\forms-sliders.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\forms-tagsinput.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\forms-timepicker.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\forms-typeahead.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\forms-wizard.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\forms-wysihtml5.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\forms.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\gallery.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\header-mobile.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\horizontal-menu.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\invoice.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\labels.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\loading-bar.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\login-page.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\mailbox.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\main.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\maps.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\miscellaneous.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\mixins.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\modals.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\navbars.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\nestable.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\notes.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\page-error.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\page-skins.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\panels.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\popovers-tooltips.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\portlets.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\print.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\profile.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\search.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\settings-pane.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\sidebar.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\tables.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\tabs-accordions.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\toastr.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\tocify.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\user-info-navbar.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\variables.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\vertical-timeline.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-less\widgets.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon-skins.less" />
+    <Content Include="Admin\Xenon\assets\less\xenon.less" />
+    <Content Include="Admin\Xenon\data\.DS_Store" />
+    <Content Include="Admin\Xenon\data\crop-image.php" />
+    <Content Include="Admin\Xenon\data\login-check.php" />
+    <Content Include="Admin\Xenon\data\names.json" />
+    <Content Include="Admin\Xenon\data\select2-remote-data.php" />
+    <Content Include="Admin\Xenon\data\sparklineResourceData.json" />
+    <Content Include="Admin\Xenon\data\typeahead-generate.php" />
+    <Content Include="Admin\Xenon\data\typeahead-hp-movies.php" />
+    <Content Include="Admin\Xenon\data\upload-file.php" />
+    <Content Include="Admin\Admin.Master" />
+    <Content Include="kindeditor\asp.net\file_manager_json.ashx" />
+    <Content Include="kindeditor\asp.net\upload_json.ashx" />
+    <Content Include="AjaxResponse\tech_adminHandler.ashx" />
+    <Content Include="AjaxResponse\tech_meeting_typeHandler.ashx" />
+    <Content Include="AjaxResponse\tech_meetingHandler.ashx" />
+    <Content Include="AjaxResponse\tech_html_templateHandler.ashx" />
+    <Content Include="AjaxResponse\tech_html_template_listHandler.ashx" />
+    <Content Include="AjaxResponse\email_templateHandler.ashx" />
+    <Content Include="AjaxResponse\tech_meeting_reg_typeHandler.ashx" />
+    <Content Include="AjaxResponse\tech_published_formHandler.ashx" />
+    <Content Include="AjaxResponse\tech_article_typeHandler.ashx" />
+    <Content Include="AjaxResponse\PageBaseHandler.ashx" />
+    <Content Include="AjaxResponse\testHandler.ashx" />
+    <Content Include="AjaxResponse\tech_batchHandler.ashx" />
+    <Content Include="AjaxResponse\PrintPersonHandler.ashx" />
+    <Content Include="AjaxResponse\tech_messageHandler.ashx" />
+    <Content Include="AjaxResponse\unsubscribeEmail.ashx" />
+    <Content Include="AjaxResponse\WeiXinAPI.ashx" />
+    <Content Include="AjaxResponse\tech_user_allHandler.ashx" />
+    <Content Include="AjaxResponse\tech_send_wx_messageHandler.ashx" />
+    <Content Include="AjaxResponse\tech_forbidden_wordHandler.ashx" />
+    <Content Include="AdminLog\AdminLog.Master" />
+    <Content Include="AjaxResponse\tech_operating_recordHandler.ashx" />
+    <None Include="Properties\PublishProfiles\TechMaxMeetingManage.pubxml" />
+    <None Include="Properties\PublishProfiles\菲森.pubxml" />
+    <Content Include="Upload\excelFile\Book1.xlsx" />
+    <Content Include="Upload\批量对账单.xlsx" />
+    <None Include="Web References\TechMaxSms\SMSWebService.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{b5b45817-d2a6-4587-85bc-8cb0304c38ee}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{a73931e5-e6bb-41ba-830a-b1251a1fa10b}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{6189bfb2-126a-4ee0-9c5c-987855e80b4c}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{2e777d81-a627-49c4-a8e3-c9dd9ed96351}</Project>
+      <Name>IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{97e4479e-0462-41b5-bf17-2e8665666cdc}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="kindeditor\attached\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://note.i-conference.org/SMSWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\TechMaxSms\</RelPath>
+      <UpdateFromURL>http://note.i-conference.org/SMSWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>WebSite_TechMaxSms_SMSWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12592</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12559/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

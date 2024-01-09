@@ -1,0 +1,11 @@
+D:\GoldMouse\Works\2017\TechMaxMeetingManage\articleToWord\obj\Debug\articleToWord.csprojResolveAssemblyReference.cache
+D:\GoldMouse\Works\2017\TechMaxMeetingManage\articleToWord\obj\Debug\articleToWord.Form1.resources
+D:\GoldMouse\Works\2017\TechMaxMeetingManage\articleToWord\obj\Debug\articleToWord.Properties.Resources.resources
+D:\GoldMouse\Works\2017\TechMaxMeetingManage\articleToWord\obj\Debug\articleToWord.csproj.GenerateResource.Cache
+D:\GoldMouse\Works\2017\TechMaxMeetingManage\articleToWord\bin\Debug\articleToWord.exe
+D:\GoldMouse\Works\2017\TechMaxMeetingManage\articleToWord\bin\Debug\articleToWord.pdb
+D:\GoldMouse\Works\2017\TechMaxMeetingManage\articleToWord\obj\Debug\articleToWord.exe
+D:\GoldMouse\Works\2017\TechMaxMeetingManage\articleToWord\obj\Debug\articleToWord.pdb
+D:\GoldMouse\Works\2017\TechMaxMeetingManage\articleToWord\bin\Debug\Microsoft.Office.Interop.Word.dll
+D:\GoldMouse\Works\2017\TechMaxMeetingManage\articleToWord\bin\Debug\office.dll
+D:\GoldMouse\Works\2017\TechMaxMeetingManage\articleToWord\bin\Debug\Microsoft.Vbe.Interop.dll

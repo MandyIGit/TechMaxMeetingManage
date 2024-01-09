@@ -1,0 +1,22 @@
+﻿#pager ul.pages {TEXT-ALIGN: center;
+
+}
+
+#pager ul.pages li {
+list-style:none;
+display:inline-block;
+BORDER: #9aafe5 1px solid; PADDING-RIGHT: 5px;  PADDING-LEFT: 5px; PADDING-BOTTOM: 2px;  COLOR: #2e6ab1; MARGIN-RIGHT: 2px; PADDING-TOP: 2px;  TEXT-DECORATION: none
+}
+
+#pager ul.pages li:hover {
+BORDER: #2b66a5 1px solid; BACKGROUND-COLOR: lightyellow;
+}
+
+#pager ul.pages li.pgEmpty {
+BORDER: #929292 1px solid; PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 2px;  COLOR: #929292; MARGIN-RIGHT: 2px; PADDING-TOP: 2px;
+}
+
+#pager ul.pages li.pgCurrent {
+BORDER: #2b66a5 1px solid; PADDING-RIGHT: 5px;  PADDING-LEFT: 5px; FONT-WEIGHT: bold; PADDING-BOTTOM: 2px;  COLOR: #fff; MARGIN-RIGHT: 2px; PADDING-TOP: 2px;  BACKGROUND-COLOR: #2e6ab1;
+
+}

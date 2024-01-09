@@ -1,0 +1,204 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="tech_meeting_add.aspx.cs" Inherits="DIY.ProjectManager.tech_meeting_add" %>
+
+<%@ Register Src="~/CommonPage/header.ascx" TagPrefix="uc1" TagName="header" %>
+<%@ Register Src="~/CommonPage/footer.ascx" TagPrefix="uc1" TagName="footer" %>
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>会议信息</title>
+    <link rel="stylesheet" type="text/css" href="/style/main.css" />
+    <script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="/js/admin_main.js"></script>
+    <script type="text/javascript" src="/js/techmaxJS.js" charset="gb2312"></script>
+    <script type="text/javascript" src="/js/artDialog.js?skin=black"></script>
+    <script type="text/javascript" src="/js/artDialog.source.js"></script>
+    <script type="text/javascript" src="/js/iframeTools.source.js"></script>
+    <script type="text/javascript" src="/js/My97DatePicker/WdatePicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="/js/My97DatePicker/skin/WdatePicker.css" />
+    <link type="text/css" href="/user/css/style.css" rel="stylesheet" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            window.parent.document.getElementById('function_1').innerHTML = '后台管理';
+            window.parent.document.getElementById('function_2').innerHTML = '会议信息';
+        });
+        //加载
+        function LoadTable() {
+            location.reload();
+        }
+        function SaveData() {
+            if ($("#mname").val().replace(/(^\s*)|(\s*$)/g, "") == "") {
+                $("#mname").focus();
+                alert('会议名称不能为空');
+            }
+            else if ($("#address").val().replace(/(^\s*)|(\s*$)/g, "") == "") {
+                $("#address").focus();
+                alert('开会地点不能为空');
+            }
+            else if ($("#begindate").val().replace(/(^\s*)|(\s*$)/g, "") == "") {
+                $("#begindate").focus();
+                alert('会议开始日期不能为空');
+            }
+            else if ($("#enddate").val().replace(/(^\s*)|(\s*$)/g, "") == "") {
+                $("#enddate").focus();
+                alert('会议结束日期不能为空');
+            }
+            else if ($("#reguserdate").val().replace(/(^\s*)|(\s*$)/g, "") == "") {
+                $("#reguserdate").focus();
+                alert('前期注册截止时间不能为空');
+            }
+            else if ($("#articledate").val().replace(/(^\s*)|(\s*$)/g, "") == "") {
+                $("#articledate").focus();
+                alert('开放征文截止时间不能为空');
+            }
+            else if ($("#lodgingdate").val().replace(/(^\s*)|(\s*$)/g, "") == "") {
+                $("#lodgingdate").focus();
+                alert('开放住宿截止时间不能为空');
+            }
+            else if ($("#meetingcheckin_date").val().replace(/(^\s*)|(\s*$)/g, "") == "") {
+                $("#meetingcheckin_date").focus();
+                alert('大会报到日期不能为空');
+            }
+            else if ($("#regenddate").val().replace(/(^\s*)|(\s*$)/g, "") == "") {
+                $("#regenddate").focus();
+                alert('注册缴费截止日期不能为空');
+            }
+            else {
+                $.ajax({
+                    type: "post",
+                    url: "/AjaxResponse/tech_mobileHandler.ashx?type=SaveMeetingAdd&postvalue=",
+                    data: $("#form1").serialize(),
+                    success: function (data) {
+                        if (data == "OK") {
+                            dialogTimeClose('操作成功！', 'tech_meeting_list.aspx', "no");
+                        }
+                        else {
+                            dialogTime('' + data + '', '');
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+    <uc1:header runat="server" ID="header" />
+    <form id="form1">
+        <input type="hidden" id="project_manager_id" name="project_manager_id" value="<%=project_manager_id %>" />
+        <div class="Content">
+            <div class="listtable" id="system_data">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="infotablel">
+                    <tr>
+                        <td colspan="2">申请会议</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">会议名称</th>
+                        <td>
+                            <input class="txt" id="mname" name="mname" type="text" style="width:300px;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">开会地点</th>
+                        <td>
+                            <input class="txt" id="address" name="address" type="text" style="width:150px;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">会议开始日期</th>
+                        <td>
+                            <input class="txt Wdate" id="begindate" name="begindate" type="text" onclick="WdatePicker({skin:'blue',readOnly:true})" readonly="true" value="<%=DateTime.Now.ToDateStr() %>" style="width:150px;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">会议结束日期</th>
+                        <td>
+                            <input class="txt Wdate" id="enddate" name="enddate" type="text" onclick="WdatePicker({skin:'blue',readOnly:true})" readonly="true" style="width:150px;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">是否开启会员注册</th>
+                        <td>
+                            <select name="reguser" id="reguser">
+	                            <option selected="selected" value="1">开启</option>
+	                            <option value="2">关闭</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">前期注册截止时间</th>
+                        <td>
+                            <input class="txt Wdate" id="reguserdate" name="reguserdate" type="text" onclick="WdatePicker({skin:'blue',readOnly:true})" readonly="true" style="width:150px;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">是否开放征文</th>
+                        <td>
+                            <select name="article" id="article">
+	                            <option selected="selected" value="1">开启</option>
+	                            <option value="2">关闭</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">开放征文截止时间</th>
+                        <td>
+                            <input class="txt Wdate" id="articledate" name="articledate" type="text" onclick="WdatePicker({skin:'blue',readOnly:true})" readonly="true" style="width:150px;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">是否开放住宿预订</th>
+                        <td>
+                            <select name="lodging" id="lodging">
+	                            <option selected="selected" value="1">开启</option>
+	                            <option value="2">关闭</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">开放住宿截止时间</th>
+                        <td>
+                            <input class="txt Wdate" id="lodgingdate" name="lodgingdate" type="text" onclick="WdatePicker({skin:'blue',readOnly:true})" readonly="true" style="width:150px;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">大会报到日期</th>
+                        <td>
+                            <input class="txt Wdate" id="meetingcheckin_date" name="meetingcheckin_date" type="text" onclick="WdatePicker({skin:'blue',readOnly:true})" readonly="true" style="width:150px;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">注册缴费截止日期</th>
+                        <td>
+                            <input class="txt Wdate" id="regenddate" name="regenddate" type="text" onclick="WdatePicker({skin:'blue',readOnly:true})" readonly="true" style="width:150px;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">大会网址</th>
+                        <td>
+                            <input class="txt" id="m_website" name="m_website" type="text" style="width:300px;" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"></th>
+                        <td>
+                            <input type="hidden" id="sys_code" name="sys_code" />
+                            <a class="btnblue" href="javascript:void(0)" onclick="SaveData()">保存</a>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+                <div class="h10"></div>
+            </div>
+        </div>
+    </form>
+    <uc1:footer runat="server" ID="footer" />
+</body>
+</html>

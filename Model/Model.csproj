@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{97E4479E-0462-41B5-BF17-2E8665666CDC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Model</RootNamespace>
+    <AssemblyName>Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="email_template.cs" />
+    <Compile Include="tech_admin.cs" />
+    <Compile Include="Pages.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tech_article.cs" />
+    <Compile Include="tech_article_type.cs" />
+    <Compile Include="tech_cart.cs" />
+    <Compile Include="tech_forbidden_word.cs" />
+    <Compile Include="tech_html_template.cs" />
+    <Compile Include="tech_html_template_list.cs" />
+    <Compile Include="tech_meeting.cs" />
+    <Compile Include="tech_meeting_hall.cs" />
+    <Compile Include="tech_meeting_reg_type.cs" />
+    <Compile Include="tech_meeting_role.cs" />
+    <Compile Include="tech_meeting_schedule.cs" />
+    <Compile Include="tech_meeting_type.cs" />
+    <Compile Include="tech_meeting_user_ppt.cs" />
+    <Compile Include="tech_message.cs" />
+    <Compile Include="tech_mobile_menu.cs" />
+    <Compile Include="tech_mobile_menu_content.cs" />
+    <Compile Include="tech_mobile_site_template.cs" />
+    <Compile Include="tech_mobile_template.cs" />
+    <Compile Include="tech_mobile_template_menu.cs" />
+    <Compile Include="tech_mobile_type.cs" />
+    <Compile Include="tech_mobile_type_menu.cs" />
+    <Compile Include="tech_mobile_version.cs" />
+    <Compile Include="tech_operating_record.cs" />
+    <Compile Include="tech_person_print.cs" />
+    <Compile Include="tech_project_manager.cs" />
+    <Compile Include="tech_published_form.cs" />
+    <Compile Include="tech_schedule.cs" />
+    <Compile Include="tech_send_wx_message.cs" />
+    <Compile Include="tech_session.cs" />
+    <Compile Include="tech_task_list.cs" />
+    <Compile Include="tech_temp_batch_account.cs" />
+    <Compile Include="tech_user_all.cs" />
+    <Compile Include="tech_yanzhengma.cs" />
+    <Compile Include="tv_competence.cs" />
+    <Compile Include="tv_menu.cs" />
+    <Compile Include="tv_subjects.cs" />
+    <Compile Include="tv_system_user.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

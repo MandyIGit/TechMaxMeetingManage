@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B5B45817-D2A6-4587-85BC-8CB0304C38EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="email_templateManager.cs" />
+    <Compile Include="tech_adminManager.cs" />
+    <Compile Include="BLLComm.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tech_articleManager.cs" />
+    <Compile Include="tech_article_typeManager.cs" />
+    <Compile Include="tech_cartManager.cs" />
+    <Compile Include="tech_forbidden_wordManager.cs" />
+    <Compile Include="tech_html_templateManager.cs" />
+    <Compile Include="tech_html_template_listManager.cs" />
+    <Compile Include="tech_meetingManager.cs" />
+    <Compile Include="tech_meeting_hallManager.cs" />
+    <Compile Include="tech_meeting_orderManager.cs" />
+    <Compile Include="tech_meeting_reg_typeManager.cs" />
+    <Compile Include="tech_meeting_roleManager.cs" />
+    <Compile Include="tech_meeting_scheduleManager.cs" />
+    <Compile Include="tech_meeting_typeManager.cs" />
+    <Compile Include="tech_meeting_user_pptManager.cs" />
+    <Compile Include="tech_messageManager.cs" />
+    <Compile Include="tech_mobile_menuManager.cs" />
+    <Compile Include="tech_mobile_menu_contentManager.cs" />
+    <Compile Include="tech_mobile_site_templateManager.cs" />
+    <Compile Include="tech_mobile_templateManager.cs" />
+    <Compile Include="tech_mobile_template_menuManager.cs" />
+    <Compile Include="tech_mobile_typeManager.cs" />
+    <Compile Include="tech_mobile_type_menuManager.cs" />
+    <Compile Include="tech_mobile_versionManager.cs" />
+    <Compile Include="tech_operating_recordManager.cs" />
+    <Compile Include="tech_person_printManager.cs" />
+    <Compile Include="tech_project_managerManager.cs" />
+    <Compile Include="tech_published_formManager.cs" />
+    <Compile Include="tech_scheduleManager.cs" />
+    <Compile Include="tech_send_wx_messageManager.cs" />
+    <Compile Include="tech_sessionManager.cs" />
+    <Compile Include="tech_task_listManager.cs" />
+    <Compile Include="tech_temp_batch_accountManager.cs" />
+    <Compile Include="tech_user_allManager.cs" />
+    <Compile Include="tech_yanzhengmaManager.cs" />
+    <Compile Include="tv_competenceManager.cs" />
+    <Compile Include="tv_menuManager.cs" />
+    <Compile Include="tv_subjectsManager.cs" />
+    <Compile Include="tv_system_userManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{a73931e5-e6bb-41ba-830a-b1251a1fa10b}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{6189bfb2-126a-4ee0-9c5c-987855e80b4c}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDAL\IDAL.csproj">
+      <Project>{2e777d81-a627-49c4-a8e3-c9dd9ed96351}</Project>
+      <Name>IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{97e4479e-0462-41b5-bf17-2e8665666cdc}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
